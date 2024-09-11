@@ -67,16 +67,16 @@ const Footer = () => {
               </h1>
               <ul className="flex flex-col gap-3">
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/">Home</a>
+                  <a href="/Home">Home</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                   <a href="/aboutus">About us</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/gallery">Gallery</a>
+                  <a href="/Gallery">Gallery</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/payments">Payments</a>
+                  <a href="/Payment">Payments</a>
                 </li>
               </ul>
             </div>
