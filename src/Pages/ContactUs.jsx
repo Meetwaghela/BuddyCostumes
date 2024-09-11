@@ -116,7 +116,7 @@ const ContactUs = () => {
           We are always available to answer your queries, offer advice, and discuss your electrical requirements. Get in touch with us through any of the contact details provided below.
         </h2>
         <h1 className="text-2xl font-semibold text-center mb-2">Contact us today to schedule a consultation</h1>
-        <h1 className="text-4xl font-semibold text-center mb-5">Jayesh Patel</h1>
+        <h1 className="text-4xl font-semibold text-center mb-5">Jayesh Vagadiya</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
           {contactData.slice(0, 4).map((contact) => (
             <motion.a

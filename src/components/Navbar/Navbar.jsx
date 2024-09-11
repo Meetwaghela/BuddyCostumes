@@ -214,7 +214,7 @@ const Navbar = () => {
             <div className="jp-image-container">
               <img src={JP} alt="Jayesh Patel" className="jp-image" />
               <div className="jp-image-name">
-                <h1>Jayesh Patel</h1>
+                <h1>Jayesh Vagadiya</h1>
               </div>
             </div>
           </motion.div>

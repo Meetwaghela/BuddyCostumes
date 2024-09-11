@@ -57,7 +57,7 @@
 .jp-image {
     position: relative;
     top: 3px; 
-    left: 12.5px; 
+    left: 25px; 
     display: block;
     z-index: 999;
     cursor: pointer;

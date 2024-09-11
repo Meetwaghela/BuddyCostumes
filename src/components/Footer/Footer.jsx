@@ -56,7 +56,7 @@ const Footer = () => {
                 className="rounded-full h-10 w-10 object-cover jp-img1"
               />
               <div className="jp-img1-name mt-3">
-                <h1>Jayesh Patel</h1>
+                <h1>Jayesh Vagadiya</h1>
               </div>
             </div>
           </div>

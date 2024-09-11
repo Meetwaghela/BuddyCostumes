@@ -50,7 +50,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
               />
             </div>
             <div>
-              <h1>Jayesh Patel</h1>
+              <h1>Jayesh Vagadiya</h1>
               <h2 className="text-sm text-slate-500">Proprietor</h2>
             </div>
           </div>
