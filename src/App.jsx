@@ -17,6 +17,7 @@ import Processes from './Pages/Processes';
 import Maintenance from './components/Service/Maintenance';
 import Wiring from './components/Service/Wiring';
 import Service from './components/Services/Service';
+import Privacypolicy from './Pages/Privacypolicy';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Maintenance" element={<Maintenance />} />
         <Route path="/Processes" element={<Processes />} />
         <Route path="/Service" element={<Service />} />
+        <Route path="/Privacy" element={<Privacypolicy />} />
         <Route 
           path="/" 
           element={

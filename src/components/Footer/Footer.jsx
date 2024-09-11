@@ -67,7 +67,7 @@ const Footer = () => {
               </h1>
               <ul className="flex flex-col gap-3">
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/Home">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                   <a href="/aboutus">About us</a>
@@ -92,7 +92,7 @@ const Footer = () => {
                   <a href="/ContactUs">Contact us</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/privacy-policy">Privacy Policy</a>
+                  <a href="/Privacy">Privacy Policy</a>
                 </li>
               </ul>
             </div>
