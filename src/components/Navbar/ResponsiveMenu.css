@@ -1,0 +1,100 @@
+.jp-img1-container {
+    height: 12;
+    width: 12;
+    display: flex;
+    align-items: center;
+    
+}
+
+.jp-img1 {
+    margin-right:10px;
+    margin-top: 10px;
+    margin-left: -10px ;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    overflow: hidden; 
+    transform-origin: top left;
+}
+
+.jp-img1-name h1 {
+    margin: 0px;
+    font-size: 20px; 
+}
+.jp-img1:hover {
+    transform: scale(4.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
+  }
+  
+
+
+.jp-img {
+    position: relative;
+    top: 0; 
+    left: 0; 
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    overflow: hidden; 
+    transform-origin: top left;
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+  }
+  
+  .jp-img:hover {
+    transform: scale(4.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
+  }
+  
+
+
+.jp-image {
+    position: relative;
+    top: 3px; 
+    left: 12.5px; 
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+    transition: transform 0.8s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    width: 50px; 
+    height: 50px; 
+    overflow: hidden; 
+    transform-origin: top right;
+}
+
+.jp-image:hover {
+    transform: scale(4.5); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.navbar-container {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .jp-image-container {
+        display: none;
+    }
+}
+
+.toggle-menu {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white; 
+}
+
+.Footer {
+    position: relative; 
+    z-index: 1; 
+  }
+  

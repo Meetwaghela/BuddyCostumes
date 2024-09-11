@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-navbar {
+    @apply bg-gradient-to-r from-pink-800 to-violet-950 dark:bg-gray-800;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-primary text-white font-semibold rounded-lg hover:bg-secondary duration-200 hover:shadow-[0px_10px_8px_-7px_#cd5c5c] py-2 px-6;
+  }
+
+  .drop-shadow {
+    filter: drop-shadow(6px 8px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  .scale-photo {
+    transform: scale(1);
+  }
+
+  .img {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .dark .dark-body-bg {
+    @apply bg-gray-900;
+  }
+}
+
+body {
+  @apply bg-white dark:bg-gray-900;
+}
+
+* {
+  outline: none;
+  border: none;
+}

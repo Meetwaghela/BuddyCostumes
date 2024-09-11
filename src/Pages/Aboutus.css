@@ -1,0 +1,156 @@
+
+.about-us-container {
+    padding: 20px;
+    max-width: 1000px;
+    top: 100px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif,;
+    position: relative;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #58575723;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    color: #c54b4b;
+}
+
+.content-section h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+}
+
+.content-section p, .content-section ul {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.content-section ul {
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+.content-section ul li strong {
+    color: #000;
+}
+
+
+.map-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.about-us-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    text-align: center; 
+    padding: 50px 0;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 24px;
+}
+
+.content-section {
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content-section p,
+.content-section ul {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.team-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-info {
+    text-align: left;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    .team-member {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .team-info {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-member {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-info {
+        margin-left: 0;
+    }
+}
