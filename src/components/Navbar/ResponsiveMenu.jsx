@@ -62,7 +62,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
                 </a>
               </li>
               <li>
-                <a href="/Aboutus" className="mb-5 inline-block">
+                <a href="/aboutus" className="mb-5 inline-block">
                   About Us
                 </a>
               </li>
@@ -72,12 +72,12 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
                 </a>
               </li>
               <li>
-                <a href="#Gallery" className="mb-5 inline-block">
+                <a href="/Gallery" className="mb-5 inline-block">
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="#contact" className="mb-5 inline-block">
+                <a href="/ContactUs" className="mb-5 inline-block">
                   Contact Us
                 </a>
               </li>
