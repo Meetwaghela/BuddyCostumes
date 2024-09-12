@@ -77,6 +77,7 @@ const Maintenance = lazy(() => import('./components/Service/Maintenance'));
 const Wiring = lazy(() => import('./components/Service/Wiring'));
 const Service = lazy(() => import('./components/Services/Service'));
 const Privacypolicy = lazy(() => import('./Pages/Privacypolicy'));
+const Clients = lazy(() => import('./Pages/Clients'))
 
 function App() {
   return (
@@ -93,6 +94,7 @@ function App() {
           <Route path="/Processes" element={<Processes />} />
           <Route path="/Service" element={<Service />} />
           <Route path="/Privacy" element={<Privacypolicy />} />
+          <Route path="/Clients" element={<Clients />} />
           <Route 
             path="/" 
             element={
