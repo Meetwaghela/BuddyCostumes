@@ -69,7 +69,6 @@ const Processes = () => {
             </div>
           </div>
 
-          {/* Right side with video */}
           <div className="flex justify-center items-center">
             <video controls className="rounded-lg shadow-lg" width="800">
               <source src={VideoFile} type="video/mp4" />
