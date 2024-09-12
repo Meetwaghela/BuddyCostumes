@@ -17,8 +17,8 @@ const Processes = () => {
             Our Comprehensive Electrical <br />Solutions Process
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto dark:text-white">
-          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-4  gap-4 max-w-7xl mx-auto dark:text-white px-8">
+          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700 ">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">1/ Consultation</h3>
             <p className="mt-2 text-gray-600 dark:text-white">
               We begin by understanding your business, needs, and requirements to offer you the best electrical solutions.
