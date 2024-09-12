@@ -1,42 +1,35 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import './Gallery.css';
 import Img from './Img';
 import LargeImage from './LargeImg';
 
-class Gallery extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            imgLst: [
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/home.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' },
-                { imgSrc: 'src/assets/demo.jpg' }
-                
-            ],
-            currentIndex: 0,
-            imgStyle: {
-                lrgImgConStyle: {
-                    display: 'none'
-                },
-                imgListConStyle: {
-                    display: 'flex'
-                }
-            },
-            lrgImg: {
-                imgSrc: '',
-                title: '',
-                details: ''
-            }
-        };
-    }
+const Gallery = () => {
+    const [imgLst] = useState([
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/home.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/demo.jpg' }
+    ]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [imgStyle, setImgStyle] = useState({
+        lrgImgConStyle: { display: 'none' },
+        imgListConStyle: { display: 'flex' }
+    });
+    const [lrgImg, setLrgImg] = useState({
+        imgSrc: '',
+        title: '',
+        details: ''
+    });
 
-    handleClick = (imgSrc) => {
-        const index = this.state.imgLst.findIndex(image => image.imgSrc === imgSrc);
+    const navigate = useNavigate(); // Hook for navigation
+
+    const handleClick = (imgSrc) => {
+        const index = imgLst.findIndex(image => image.imgSrc === imgSrc);
 
         if (index !== -1) {
             let title = '';
@@ -47,46 +40,40 @@ class Gallery extends Component {
                 details = 'Code is Working perfectly';
             }
 
-            this.setState({
-                currentIndex: index,
-                imgStyle: {
-                    lrgImgConStyle: { display: 'block' },
-                    imgListConStyle: { display: 'none' }
-                },
-                lrgImg: {
-                    imgSrc: imgSrc,
-                    title: title,
-                    details: details
-                }
+            setCurrentIndex(index);
+            setImgStyle({
+                lrgImgConStyle: { display: 'block' },
+                imgListConStyle: { display: 'none' }
+            });
+            setLrgImg({
+                imgSrc: imgSrc,
+                title: title,
+                details: details
             });
         } else {
             console.error("Selected image not found.");
         }
-    }
+    };
 
-    closeLargeImage = () => {
-        this.setState({
-            imgStyle: {
-                lrgImgConStyle: { display: 'none' },
-                imgListConStyle: { display: 'flex' }
-            }
+    const closeLargeImage = () => {
+        setImgStyle({
+            lrgImgConStyle: { display: 'none' },
+            imgListConStyle: { display: 'flex' }
         });
-    }
+    };
 
-    showPrevImage = () => {
-        const { currentIndex, imgLst } = this.state;
+    const showPrevImage = () => {
         const prevIndex = (currentIndex - 1 + imgLst.length) % imgLst.length;
-        this.updateLargeImage(prevIndex);
-    }
+        updateLargeImage(prevIndex);
+    };
 
-    showNextImage = () => {
-        const { currentIndex, imgLst } = this.state;
+    const showNextImage = () => {
         const nextIndex = (currentIndex + 1) % imgLst.length;
-        this.updateLargeImage(nextIndex);
-    }
+        updateLargeImage(nextIndex);
+    };
 
-    updateLargeImage = (index) => {
-        const selectedImage = this.state.imgLst[index];
+    const updateLargeImage = (index) => {
+        const selectedImage = imgLst[index];
         let title = '';
         let details = '';
 
@@ -95,54 +82,51 @@ class Gallery extends Component {
             details = 'Code Working perfectly';
         }
 
-        this.setState({
-            currentIndex: index,
-            lrgImg: {
-                imgSrc: selectedImage.imgSrc,
-                title: title,
-                details: details
-            }
+        setCurrentIndex(index);
+        setLrgImg({
+            imgSrc: selectedImage.imgSrc,
+            title: title,
+            details: details
         });
-    }
+    };
 
-    render() {
-        const { imgLst, imgStyle, lrgImg } = this.state;
+    const handleBackClick = () => {
+        navigate(-1); // Navigate to the previous page
+    };
 
-        const imageItemList = imgLst.map((image, index) => (
-            <button 
-                onClick={() => this.handleClick(image.imgSrc)} 
-                style={{ background: 'none', border: 'none' }} 
-                key={index}
-            >
-                <Img src={image.imgSrc} />
-            </button>
-        ));
-
-        return (
-            <React.Fragment>
-                {imgStyle.imgListConStyle.display === 'flex' && (
-                    <div>
-                        <h1 className='text-5xl font-semibold justify-center text-center py-20 mb-20 dark:text-white'>
-                            Gallery
-                        </h1>
-                    </div>
-                )}
-                <div className="flex-col items-center justify-center dark:text-white lg-img-con" style={imgStyle.lrgImgConStyle}>
-                    <LargeImage 
-                        closeButton={this.closeLargeImage} 
-                        title={lrgImg.title} 
-                        details={lrgImg.details} 
-                        src={lrgImg.imgSrc} 
-                        showPrevImage={this.showPrevImage}
-                        showNextImage={this.showNextImage}
-                    />
+    return (
+        <React.Fragment>
+            {imgStyle.imgListConStyle.display === 'flex' && (
+                <div>
+                    <h1 className='text-5xl font-semibold justify-center text-center py-20 mb-20 dark:text-white'>
+                        Gallery
+                    </h1>
                 </div>
-                <div className="wrapper" style={imgStyle.imgListConStyle}>
-                    {imageItemList}
-                </div>
-            </React.Fragment>
-        );
-    }
-}
+            )}
+            <div className="flex-col items-center justify-center dark:text-white lg-img-con" style={imgStyle.lrgImgConStyle}>
+                <LargeImage 
+                    closeButton={closeLargeImage} 
+                    title={lrgImg.title} 
+                    details={lrgImg.details} 
+                    src={lrgImg.imgSrc} 
+                    showPrevImage={showPrevImage}
+                    showNextImage={showNextImage}
+                />
+            </div>
+            <div className="wrapper" style={imgStyle.imgListConStyle}>
+                {imgLst.map((image, index) => (
+                    <button 
+                        onClick={() => handleClick(image.imgSrc)} 
+                        style={{ background: 'none', border: 'none' }} 
+                        key={index}
+                    >
+                        <Img src={image.imgSrc} />
+                    </button>
+                ))}
+            </div>
+            <button onClick={handleBackClick}>Back</button>
+        </React.Fragment>
+    );
+};
 
 export default Gallery;
