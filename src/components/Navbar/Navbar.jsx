@@ -212,7 +212,7 @@ const Navbar = () => {
               )}
             </div>
             <div className="jp-image-container">
-              <img src={JP} alt="Jayesh Patel" className="jp-image" />
+              <img src={JP} alt="Jayesh vagadiya" className="jp-image" />
               <div className="jp-image-name">
                 <h1>Jayesh Vagadiya</h1>
               </div>
