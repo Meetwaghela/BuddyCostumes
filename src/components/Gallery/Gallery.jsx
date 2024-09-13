@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom'; 
 import './Gallery.css';
 import Img from './Img';
 import LargeImage from './LargeImg';
@@ -26,7 +26,7 @@ const Gallery = () => {
         details: ''
     });
 
-    const navigate = useNavigate(); // Hook for navigation
+    const navigate = useNavigate(); 
 
     const handleClick = (imgSrc) => {
         const index = imgLst.findIndex(image => image.imgSrc === imgSrc);
@@ -91,7 +91,7 @@ const Gallery = () => {
     };
 
     const handleBackClick = () => {
-        navigate(-1); // Navigate to the previous page
+        navigate(-1); 
     };
 
     return (
