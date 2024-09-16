@@ -2,7 +2,7 @@ import React from "react";
 import img from "../../assets/home1.png";
 
 const Home = () => {
-  return (
+  return (  
     <div className="bg-gradient-to-r from-pink-800 to-violet-950 pt-20">
       <section className="container flex h-[800px] md:h-[500px] flex-col items-center justify-center">
         <div className="grid grid-cols-1 items-center gap-8 dark:text-white md:grid-cols-2">

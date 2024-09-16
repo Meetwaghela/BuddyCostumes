@@ -92,6 +92,7 @@
 .large-image {
   max-width: 480px;
   max-height: 480px;
+  margin-top: 160px ;
   width: 480px;
   height: 480px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
@@ -109,6 +110,7 @@
   color: #fff;
   border: none;
   padding: 15px 20px;
+  margin-top: 80px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
