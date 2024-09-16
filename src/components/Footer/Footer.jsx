@@ -162,7 +162,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="border-t-2 border-gray-300/50 py-6 text-center">
-            © 2016 Krishna Electricals | Jayesh Vagadiya | © all rights reserved
+            © 2016 Krishna Electricals all rights reserved
           </div>
         </div>
       </section>

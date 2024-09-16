@@ -6,10 +6,10 @@ import LargeImage from './LargeImg';
 
 const Gallery = () => {
     const [imgLst] = useState([
-        { imgSrc: 'src/assets/demo.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery2.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery3.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery4.jpg' },
         { imgSrc: 'src/assets/demo.jpg' },
         { imgSrc: 'src/assets/home.jpg' },
         { imgSrc: 'src/assets/demo.jpg' },
