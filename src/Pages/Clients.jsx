@@ -44,12 +44,12 @@ const clients = [
   { name: 'Chur Textiles Limited', logo: 'src/assets/Clients Logo/Chur.png', review: 'Top-notch electrical solutions with a focus on safety and reliability.' },
   { name: 'Jakharia Synthetics pvt ltd', logo: 'src/assets/Clients Logo/jakharia.png', review: 'Highly satisfied with the service. Their solutions have streamlined our operations significantly.' },
   { name: 'Harit Industries pvt ltd', logo: 'src/assets/Clients Logo/Harit.jpg', review: 'A trustworthy partner for our projects, providing quality services time and again.' },
-  { name: 'Balaji Polyester pvt. ltd', logo: 'src/assets/demo.jpg', review: 'High standards and great support in all their electrical installations.' },
+  { name: 'Balaji Polyester pvt. ltd', logo: 'src/assets/Clients Logo/Balaji.PNG', review: 'High standards and great support in all their electrical installations.' },
   { name: 'Global Reality Infra', logo: 'src/assets/Clients Logo/Global.png', review: 'Innovative and reliable services that have helped our business grow.' },
   { name: 'DHL Supply Chain ind. pvt. ltd.', logo: 'src/assets/Clients Logo/DHL.avif', review: 'Outstanding customer experience with a focus on quality and timeliness.' },
   { name: 'S K Logistics', logo: 'src/assets/Clients Logo/SK.jfif', review: 'Great attention to detail and professionalism, ensuring our operations run smoothly.' },
   { name: 'Hemant Surgicals Industries Ltd.', logo: 'src/assets/Clients Logo/Hemant.jpg-org', review: 'Exceptional quality and service. Their attention to detail is remarkable.' },
-  { name: 'Chacha Lifestyle pvt. ltd.', logo: 'src/assets/demo.jpg', review: 'Reliable and efficient solutions that have always exceeded our expectations.' },
+  { name: 'Chacha Lifestyle pvt. ltd.', logo: 'src/assets/Clients Logo/Chacha.PNG', review: 'Reliable and efficient solutions that have always exceeded our expectations.' },
   { name: 'New Empire Textiles processors Pvt. Ltd', logo: 'src/assets/Clients Logo/Empire.jpg', review: 'First-class service from a team that really cares about customer satisfaction.' },
 ];
 

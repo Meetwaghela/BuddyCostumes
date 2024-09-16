@@ -12,7 +12,7 @@ import JP from "../../assets/JP.jpg";
 
 const Footer = () => {
   return (
-    <div className="rounded-b-3xl rounded-t-3xl bg-gradient-to-r from-pink-800 to-violet-950 pt-20 dark:bg-gray-800">
+    <div className="rounded-b-3xl rounded-t-3xl bg-gradient-to-r from-orange-600 via-violet-900 to-purple-950 pt-20 dark:bg-gray-800">
       <section className="mx-auto max-w-[1200px] text-white ">
         <div className="grid py-4 md:grid-cols-3">
           <div className="px-5 py-1">
