@@ -4,7 +4,7 @@ import "./Aboutus.css";
 
 const Aboutus = () => {
     return (
-        <div className="overflow-hidden about-us-container dark:bg-gray-900 dark:text-white mp-20">
+        <div className="overflow-hidden about-us-container dark:bg-gray-900 dark:text-white m-20">
             <div className="hero-section dark:bg-gray-700 dark:text-white">
                 <h1><b>Welcome to Krishna Electricals</b></h1>
                 <p><b><i>Your Trusted Partner in Electrical Solutions</i></b></p>

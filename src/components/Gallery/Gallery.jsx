@@ -10,7 +10,7 @@ const Gallery = () => {
         { imgSrc: 'src/assets/Gallery/Gallery2.jpg' },
         { imgSrc: 'src/assets/Gallery/Gallery3.jpg' },
         { imgSrc: 'src/assets/Gallery/Gallery4.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery5.jpg' },
         { imgSrc: 'src/assets/home.jpg' },
         { imgSrc: 'src/assets/demo.jpg' },
         { imgSrc: 'src/assets/demo.jpg' }
