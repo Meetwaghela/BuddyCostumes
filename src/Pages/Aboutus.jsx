@@ -4,7 +4,7 @@ import "./Aboutus.css";
 
 const Aboutus = () => {
     return (
-        <div className="overflow-hidden about-us-container dark:bg-gray-900 dark:text-white">
+        <div className="overflow-hidden about-us-container dark:bg-gray-900 dark:text-white mp-20">
             <div className="hero-section dark:bg-gray-700 dark:text-white">
                 <h1><b>Welcome to Krishna Electricals</b></h1>
                 <p><b><i>Your Trusted Partner in Electrical Solutions</i></b></p>
@@ -36,25 +36,25 @@ const Aboutus = () => {
                         <h2 className="text-4xl font-bold mb-4">Our mission</h2>
                         <div className="grid grid-cols-2 gap-6">
                             <div className="mission-item ">
-                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                <div className="icon bg-white p-4 rounded-lg mb-2 dark:bg-gray-900">
                                     <FaFileContract size={32} className="text-blue-500" />
                                 </div>
                                 <p className='dark:bg-gray-900 dark:text-white'><b>Provide top-quality electrical contracting services</b></p>
                             </div>
                             <div className="mission-item">
-                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                <div className="icon bg-white p-4 rounded-lg mb-2 dark:bg-gray-900">
                                     <FaHandshake size={32} className="text-blue-500" />
                                 </div>
                                 <p className='dark:bg-gray-900 dark:text-white'><b>Build lasting relationships with our clients</b></p>
                             </div>
                             <div className="mission-item">
-                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                <div className="icon bg-white p-4 rounded-lg mb-2 dark:bg-gray-900">
                                     <FaLightbulb size={32} className="text-blue-500" />
                                 </div>
                                 <p className='dark:bg-gray-900 dark:text-white'><b>Provide personalized solutions</b></p>
                             </div>
                             <div className="mission-item">
-                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                <div className="icon bg-white p-4 rounded-lg mb-2 dark:bg-gray-900">
                                     <FaShieldAlt size={32} className="text-blue-500" />
                                 </div>
                                 <p className='dark:bg-gray-900 dark:text-white'><b>Ensure the safety and reliability of your electrical systems</b></p>
@@ -82,6 +82,7 @@ const Aboutus = () => {
                             <p className='dark:text-white'>Jayesh has over 15 years of experience in designing and executing electrical installations for various industries.</p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 

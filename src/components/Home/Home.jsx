@@ -21,8 +21,9 @@ const Home = () => {
               Our focus on excellence helps us stay at the top of the industry. 
             </p>
             <div className=" Button space-x-4">
-              <button className="btn-primary">
+              <button className="btn-primary"><a href="/ContactUs">
                 Get Started
+                </a>
               </button>
             </div>
           </div>
