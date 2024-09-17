@@ -3,9 +3,11 @@ import './Electricalins.css';
 
 const Electricalins = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [clickedIndex, setClickedIndex] = useState(null);
 
   const handleClick = (index) => {
     setActiveIndex(index);
+    setClickedIndex(index === clickedIndex ? null : index); // Handle click to hide "Click to know more"
   };
 
   const images = [
@@ -22,14 +24,14 @@ const Electricalins = () => {
     { src: 'src/assets/Installation/FSP2.png', alt: '', content: 'Installation of 8 Way Feeder Pillar' },
     { src: 'src/assets/Installation/Panel.jpg', alt: '', content: 'Installation of Panel' },
     { src: 'src/assets/Installation/Cable Lay.jpg', alt: '', content: 'Cable Laying' },
-    { src: 'src/assets/Installation/Cable Termi.jpg', alt: '', content: 'Cable Terminatiom' },
+    { src: 'src/assets/Installation/Cable Termi.jpg', alt: '', content: 'Cable Termination' },
   ];
 
   return (
     <div>
       <div className='text-3xl font-bold text-center py-20 mb-20'>
         <h1>ELECTRICAL INSTALLATIONS</h1>
-        <p className='text-xl font-semibold justify-center text-center'>
+        <p className='text-xl italic font-semibold justify-center text-center'>
           Electrical installations should always be performed by qualified electricians who understand the complexities of electrical systems and the importance of adhering to safety standards. Poorly installed electrical systems can lead to inefficiencies, frequent outages, and serious hazards such as electrical fires or shocks.
           Regular inspections and maintenance are also important to ensure that the electrical installation remains safe and functional over time.
         </p>
@@ -42,9 +44,14 @@ const Electricalins = () => {
             onClick={() => handleClick(index)}
           >
             <img src={image.src} alt={image.alt} className="hover-image" />
-            <div className="hover-content">
+            <div className="hover-content font-semibold">
               {image.content}
             </div>
+            {clickedIndex !== index && (
+              <div className={`click-to-know-more text-white ${activeIndex === index ? 'visible' : ''}`}>
+                Click to know more about image or video
+              </div>
+            )}
           </div>
         ))}
       </div>

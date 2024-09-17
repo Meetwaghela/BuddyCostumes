@@ -3,9 +3,11 @@ import './Electricalins.css';
 
 const Wiring = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [clickedIndex, setClickedIndex] = useState(null);
 
   const handleClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
+    setClickedIndex(index === clickedIndex ? null : index);  
   };
 
   const images = [
@@ -51,9 +53,11 @@ const Wiring = () => {
             <div className="font-semibold hover-content">
               {item.content}
             </div>
-            <div className={`click-to-know-more ${activeIndex === index ? 'visible' : ''}`}>
-              Click to know more about image
-            </div>
+            {clickedIndex !== index && (
+              <div className={`click-to-know-more text-white ${activeIndex === index ? 'visible' : ''}`}>
+                Click to know more about image or video
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -128,10 +128,14 @@ const Navbar = () => {
                               </a>
                             </li>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
+                            <a href="/Wiring">
                               Industrial Wiring
+                              </a>
                             </li>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
+                            <a href="/Solution">
                               Electrical Solutions
+                              </a>
                             </li>
                           </ul>
                           <ul className="mt-3 flex flex-col gap-2">
@@ -139,13 +143,19 @@ const Navbar = () => {
                               Other Services
                             </h1>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
+                            <a href="/Contracting">
                               Electrical Contracting
+                              </a>
                             </li>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
+                            <a href="/Maintenance">
                               Electrical Maintenance
+                              </a>
                             </li>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
+                            <a href="/Innovative">
                               Innovative Electrical Solutions
+                              </a>
                             </li>
                           </ul>
                           <div>
