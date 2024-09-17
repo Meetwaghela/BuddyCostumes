@@ -8,13 +8,13 @@ const ProgressBar = ({ label, percentage, delay }) => {
     progress.style.width = "0%";
     const timer = setTimeout(() => {
       progress.style.width = `${percentage}%`;
-    }, delay * 3000);
+    }, delay * 500);
 
     return () => clearTimeout(timer);
   }, [percentage, delay]);
 
   return (
-    <div className="mb-4 w-[75%] sm:ml-0 ml-3 overflow-hidden">
+    <div className="mb-4 w-[90%] sm:w-[75%] sm:ml-0 ml-3 overflow-hidden">
       <div className="flex justify-between mb-1">
         <span>{label}</span>
         <span>{percentage}%</span>

@@ -7,7 +7,7 @@ const Electricalins = () => {
 
   const handleClick = (index) => {
     setActiveIndex(index);
-    setClickedIndex(index === clickedIndex ? null : index); // Handle click to hide "Click to know more"
+    setClickedIndex(index === clickedIndex ? null : index); 
   };
 
   const images = [
@@ -29,9 +29,9 @@ const Electricalins = () => {
 
   return (
     <div>
-      <div className='text-3xl font-bold text-center py-20 mb-20'>
+      <div className='text-3xl font-bold text-center py-20 mb-20 dark:text-white'>
         <h1>ELECTRICAL INSTALLATIONS</h1>
-        <p className='text-xl italic font-semibold justify-center text-center'>
+        <p className='text-xl italic font-semibold justify-center text-center dark:text-white'>
           Electrical installations should always be performed by qualified electricians who understand the complexities of electrical systems and the importance of adhering to safety standards. Poorly installed electrical systems can lead to inefficiencies, frequent outages, and serious hazards such as electrical fires or shocks.
           Regular inspections and maintenance are also important to ensure that the electrical installation remains safe and functional over time.
         </p>
