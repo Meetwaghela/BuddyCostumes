@@ -12,7 +12,7 @@ import JP from "../../assets/JP.jpg";
 
 const Footer = () => {
   return (
-    <div className="rounded-b-3xl rounded-t-3xl bg-gradient-to-r from-orange-600 via-violet-900 to-purple-950 pt-20 dark:bg-gray-800">
+    <div className="rounded-b-3xl rounded-t-3xl bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 pt-20 dark:bg-gray-800">
       <section className="mx-auto max-w-[1200px] text-white ">
         <div className="grid py-4 md:grid-cols-3">
           <div className="px-5 py-1">
@@ -120,7 +120,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-r-xl transition duration-300"
+                    className="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-r-xl transition duration-300"
                     aria-label="Submit your email"
                   >
                     Go

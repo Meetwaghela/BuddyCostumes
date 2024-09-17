@@ -3,7 +3,7 @@ import img from "../../assets/home1.png";
 
 const Home = () => {
   return (  
-    <div className="bg-gradient-to-r from-orange-600 via-violet-900 to-purple-950 pt-20">
+    <div className="bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 to-purple-950 pt-20">
       <section className="container flex h-[800px] md:h-[500px] flex-col items-center justify-center">
         <div className="grid grid-cols-1 items-center gap-8 dark:text-white md:grid-cols-2">
           <div

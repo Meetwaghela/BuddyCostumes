@@ -11,7 +11,7 @@ const Maintenance = () => {
   const images = [
     { src: 'src/assets/Maintenance/M1.png', alt: 'JP', content: 'Hi Code is working' },
     { src: 'src/assets/Maintenance/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if i wrote more content what will be happen to hover' },
-    { src: 'src/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/assets/Maintenance/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
     { src: 'src/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
   ];
 

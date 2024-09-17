@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import VideoFile from '../assets/Vone.mp4';
 
+const slideInFromLeft = (delay) => ({
+  initial: {
+    opacity: 0,
+    x: 50,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.9,
+      delay: delay,
+      ease: "easeInOut",
+    },
+  },
+});
+
 const Processes = () => {
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const handleVideoClick = () => {
+    setIsZoomed(!isZoomed);
+  };
+
   return (
     <section>
       <div>
@@ -17,42 +40,65 @@ const Processes = () => {
             Our Comprehensive Electrical <br />Solutions Process
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4  gap-4 max-w-7xl mx-auto dark:text-white px-8">
-          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700 ">
+
+   
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto dark:text-white px-8">
+          <motion.div
+            className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700"
+            variants={slideInFromLeft(0)} 
+            initial="initial"
+            animate="animate"
+          >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">1/ Consultation</h3>
             <p className="mt-2 text-gray-600 dark:text-white">
               We begin by understanding your business, needs, and requirements to offer you the best electrical solutions.
             </p>
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700">
+          </motion.div>
+
+          <motion.div
+            className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700"
+            variants={slideInFromLeft(0.2)}
+            initial="initial"
+            animate="animate"
+          >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">2/ Planning</h3>
             <p className="mt-2 text-gray-600 dark:text-white">
               Our team develops a customized electrical plan tailored to your needs and budget.
             </p>
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700">
+          </motion.div>
+
+          <motion.div
+            className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700"
+            variants={slideInFromLeft(0.4)}
+            initial="initial"
+            animate="animate"
+          >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">3/ Execution</h3>
             <p className="mt-2 text-gray-600 dark:text-white">
               Our experienced technicians execute the plan with precision and efficiency, ensuring optimal electrical performance and safety.
             </p>
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700">
+          </motion.div>
+
+          <motion.div
+            className="bg-gray-100 p-6 rounded-lg bg-gray-300 dark:bg-gray-700"
+            variants={slideInFromLeft(0.6)} 
+            initial="initial"
+            animate="animate"
+          >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white">4/ Maintenance</h3>
             <p className="mt-2 text-gray-600 dark:text-white">
               We provide regular maintenance and support to ensure your electrical systems continue to perform at their best.
             </p>
-          </div>
+          </motion.div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto dark:text-white mt-20">
-   
           <div className="p-6">
             <h3 className="text-xl font-semibold">Specialization</h3>
             <h2 className="text-4xl font-bold">Comprehensive Electrical Solutions for Your Business</h2>
             <h3 className="text-2xl mt-6 font-semibold">Our values:</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-  
               <div>
                 <h4 className="font-bold">Quality and Safety First</h4>
                 <p className="mt-2 text-gray-600 dark:text-white">
@@ -70,7 +116,15 @@ const Processes = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <video controls className="rounded-lg shadow-lg" width="800">
+            <video 
+              autoPlay 
+              muted 
+              loop 
+              // controls = {onClick}
+              className={`rounded-lg shadow-lg ${isZoomed ? 'w-full h-full' : 'w-800'}`} 
+              width="800" 
+              onClick={handleVideoClick}
+            >
               <source src={VideoFile} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
