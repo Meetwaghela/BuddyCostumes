@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFileContract, FaHandshake, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 import "./Aboutus.css";
 
 const Aboutus = () => {
@@ -17,11 +18,50 @@ const Aboutus = () => {
                     large-scale commercial projects. Our commitment to excellence and customer satisfaction is what sets us apart.
                 </p>
 
-                <h2><b>Our Mission</b></h2>
-                <p className='dark:bg-gray-900 dark:text-white'>
-                    Our mission is to deliver reliable and innovative electrical solutions that exceed our clients' expectations.
-                    We strive to maintain the highest standards of safety, quality, and integrity in every project we undertake.
-                </p>
+                <div className="vision-mission-section grid md:grid-cols-2 gap-8">
+
+                    <div className="vision-section">
+                        <h2 className="text-4xl font-bold mb-4">Our vision</h2>
+                        <p className='dark:bg-gray-900 dark:text-white'>
+                            Our vision is to be the leading electrical contracting provider, delivering top-quality services 
+                            that power businesses and drive success.
+                        </p>
+                        <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                            Learn more
+                        </button>
+                    </div>
+
+
+                    <div className="mission-section ">
+                        <h2 className="text-4xl font-bold mb-4">Our mission</h2>
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="mission-item ">
+                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                    <FaFileContract size={32} className="text-blue-500" />
+                                </div>
+                                <p className='dark:bg-gray-900 dark:text-white'><b>Provide top-quality electrical contracting services</b></p>
+                            </div>
+                            <div className="mission-item">
+                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                    <FaHandshake size={32} className="text-blue-500" />
+                                </div>
+                                <p className='dark:bg-gray-900 dark:text-white'><b>Build lasting relationships with our clients</b></p>
+                            </div>
+                            <div className="mission-item">
+                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                    <FaLightbulb size={32} className="text-blue-500" />
+                                </div>
+                                <p className='dark:bg-gray-900 dark:text-white'><b>Provide personalized solutions</b></p>
+                            </div>
+                            <div className="mission-item">
+                                <div className="icon bg-gray-200 p-4 rounded-lg mb-2 dark:bg-gray-900">
+                                    <FaShieldAlt size={32} className="text-blue-500" />
+                                </div>
+                                <p className='dark:bg-gray-900 dark:text-white'><b>Ensure the safety and reliability of your electrical systems</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <h2><b>Our History</b></h2>
                 <p className='dark:bg-gray-900 dark:text-white'>
@@ -30,61 +70,20 @@ const Aboutus = () => {
                 </p>
             </div>
 
-            <div className="team-section dark:bg-gray-700 dark:text-white">
-    <h2 className='text-3xl text-center '><b>Meet Our Team</b></h2>
-    <div className="dark:bg-gray-700 dark:text-white team-container">
-        <div className="dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="JP" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Jayesh Patel</h3>
-                <p className='dark:text-white'>Project Manager</p>
-                <p className='dark:text-white'>Jayesh has over 15 years of experience in designing and executing electrical installations for various industries.</p>
-            </div>
-        </div>
-        <div className=" dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="RC" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Raju Choubey</h3>
-                <p className='dark:bg-gray-600 dark:text-white'>Electrical Engineer</p>
-                <p className='dark:bg-gray-600 dark:text-white'>Raju specializes in large-scale commercial electrical installations and has a passion for sustainable solutions.</p>
-            </div>
-        </div>
-        <div className="dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="CG" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Chandrakant Golait</h3>
-                <p className='dark:bg-gray-600 dark:text-white'>Technician</p>
-                <p className='dark:bg-gray-600 dark:text-white'>Chandrakant ensures all projects are executed with precision and safety, meeting industry standards.</p>
-            </div>
-        </div>
-        <div className="dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="HR" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Haresh Raut</h3>
-                <p className='dark:bg-gray-600 dark:text-white'>Electrician</p>
-                <p className='dark:bg-gray-600 dark:text-white'>Haresh specializes in residential installations, ensuring customer satisfaction and safety.</p>
-            </div>
-            
-        </div>
-        <div className=" dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="RC" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Raju Choubey</h3>
-                <p className='dark:bg-gray-600 dark:text-white'>Electrical Engineer</p>
-                <p className='dark:bg-gray-600 dark:text-white'>Raju specializes in large-scale commercial electrical installations and has a passion for sustainable solutions.</p>
-            </div>
-        </div>
-        <div className=" dark:bg-gray-600 dark:text-white team-member">
-            <img src="src/assets/demo.jpg" alt="RC" className="team-image"/>
-            <div className="dark:bg-gray-600 dark:text-white team-info">
-                <h3>Raju Choubey</h3>
-                <p className='dark:bg-gray-600 dark:text-white'>Electrical Engineer</p>
-                <p className='dark:bg-gray-600 dark:text-white'>Raju specializes in large-scale commercial electrical installations and has a passion for sustainable solutions.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
+            <div className="team-section dark:bg-gray-700 dark:text-white">
+                <h2 className='text-3xl text-center '><b>Meet Our Team</b></h2>
+                <div className="dark:bg-gray-700 dark:text-white team-container">
+                    <div className="dark:bg-gray-600 dark:text-white team-member">
+                        <img src="src/assets/demo.jpg" alt="JP" className="team-image" />
+                        <div className="dark:bg-gray-600 dark:text-white team-info">
+                            <h3>Jayesh Patel</h3>
+                            <p className='dark:text-white'>Project Manager</p>
+                            <p className='dark:text-white'>Jayesh has over 15 years of experience in designing and executing electrical installations for various industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div className="map-section" style={{ marginBottom: '20px' }}>
                 <h2 className="text-4xl font-bold text-left pb-4 dark:text-white">Location to Visit</h2>
