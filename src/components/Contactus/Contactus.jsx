@@ -37,7 +37,7 @@ const Contactus = () => {
   const navigate = useNavigate();
 
   const handleConsultationClick = () => {
-    navigate('/ContactUs');
+    navigate('/Consultancy');
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

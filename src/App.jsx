@@ -19,6 +19,7 @@ import Wiring from './components/Service/Wiring';
 import Service from './components/Services/Service';
 import Privacypolicy from './Pages/Privacypolicy';
 import Clients from './Pages/Clients';
+// import Consultancy from './Pages/Consultancy';
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
         <Route path="/Service" element={<Service />} />
         <Route path="/Privacy" element={<Privacypolicy />} />
         <Route path="/Clients" element={<Clients />} />
-        <Route 
+        {/* <Route path="/Consultancy" element={<Consultancy />} /> */}
+        <Route
           path="/" 
           element={
             <> 
