@@ -20,6 +20,7 @@ import Service from './components/Services/Service';
 import Privacypolicy from './Pages/Privacypolicy';
 import Clients from './Pages/Clients';
 import Consultancy from './Pages/Consultancy';
+import Innovative from './components/Service/Innovative';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/Privacy" element={<Privacypolicy />} />
         <Route path="/Clients" element={<Clients />} />
         <Route path="/Consultancy" element={<Consultancy />} />
+        <Route path="/Innovative" element={<Innovative />} />
         <Route
           path="/"
           element={
