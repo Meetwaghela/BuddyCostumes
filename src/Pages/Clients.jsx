@@ -11,7 +11,7 @@ const SlideLeft = (delay) => {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1.5,
+        duration: 0.8,
         delay: delay,
         ease: 'easeInOut',
       },
@@ -68,7 +68,7 @@ const Clients = () => {
         {clients.map((client, index) => (
           <motion.div
             key={index}
-            variants={SlideLeft(index * 0.2)}
+            variants={SlideLeft(index * 0.3)}
             initial="initial"
             animate="animate"
             className="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center dark:bg-gray-700"

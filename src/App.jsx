@@ -19,15 +19,15 @@ import Wiring from './components/Service/Wiring';
 import Service from './components/Services/Service';
 import Privacypolicy from './Pages/Privacypolicy';
 import Clients from './Pages/Clients';
-// import Consultancy from './Pages/Consultancy';
+import Consultancy from './Pages/Consultancy';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/aboutus" element={<Aboutus />} /> 
-        <Route path="/ContactUs" element={<ContactUs />} /> 
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Electricalins" element={<Electricalins />} />
         <Route path="/Wiring" element={<Wiring />} />
@@ -36,28 +36,29 @@ function App() {
         <Route path="/Service" element={<Service />} />
         <Route path="/Privacy" element={<Privacypolicy />} />
         <Route path="/Clients" element={<Clients />} />
-        {/* <Route path="/Consultancy" element={<Consultancy />} /> */}
+        <Route path="/Consultancy" element={<Consultancy />} />
         <Route
-          path="/" 
+          path="/"
           element={
-            <> 
+            <>
               <ResponsiveMenu />
               <Home />
               <Overview />
               <BannerDetails />
-              <Process />
-              <Services />
               <Contactus />
+              <Services />
+              <Process />
               <Footer />
             </>
-          } 
+          }
         />
       </Routes>
     </Router>
   );
 }
 
-export default App; 
+export default App;
+
 
 
 // import React, { Suspense, lazy } from 'react';

@@ -1,55 +1,98 @@
-import React from 'react';
-import { GiLetterBomb } from 'react-icons/gi';
-import { FaWhatsapp, FaRegMessage } from 'react-icons/fa';
-import { BiPhoneCall } from 'react-icons/bi';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
-const contactInfo = [
-  {
-    id: 1,
-    title: 'Email us',
-    text: 'rajuchoubey1978@gmail.com',
-    link: 'mailto:rajuchoubey1978@gmail.com',
-    icon: <GiLetterBomb aria-label="Email Icon" />,
-    delay: 0.1,
-  },
-  {
-    id: 2,
-    title: 'Chat with us',
-    text: '+919326350896',
-    link: 'https://wa.me/+919326350896',
-    icon: <FaWhatsapp aria-label="Whatsapp Icon" />,
-    delay: 0.2,
-  },
-  {
-    id: 3,
-    title: 'Talk to us',
-    text: '+919326350896',
-    link: 'tel:+919326350896',
-    icon: <BiPhoneCall aria-label="Phone Icon" />,
-    delay: 0.3,
-  },
-  {
-    id: 4,
-    title: 'Message to us',
-    text: '+919326350896',
-    link: 'sms:+919326350896',
-    icon: <FaRegMessage aria-label="Message Icon" />,
-    delay: 0.4,
-  },
-];
+import { FaEnvelope, FaWhatsapp, FaSms, FaPhoneAlt } from 'react-icons/fa';
 
 const Consultancy = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [imageSrc, setImageSrc] = useState('');
+
+  const contactInfo = [
+    {
+      id: 1,
+      icon: <FaEnvelope />,
+      title: 'Email',
+      text: 'rajuchoubey1978@gmail.com',
+      link: 'mailto:rajuchoubey1978@gmail.com',
+      delay: 0.3,
+    },
+    {
+      id: 2,
+      icon: <FaWhatsapp />,
+      title: 'Chat with us on WhatsApp',
+      contacts: [
+        { text: '+919326350896', link: 'https://wa.me/919326350896' },
+        { text: '+918668925184', link: 'https://wa.me/918668925184' },
+      ],
+      delay: 0.4,
+    },
+    {
+      id: 3,
+      icon: <FaPhoneAlt />,
+      title: 'Phone',
+      contacts: [
+        { text: '+919326350896', link: 'tel:+919326350896' },
+        { text: '+918668925184', link: 'tel:+918668925184' },
+      ],
+      delay: 0.5,
+    },
+    {
+      id: 4,
+      icon: <FaSms />,
+      title: 'Send us a message',
+      contacts: [
+        { text: '+919326350896', link: 'sms:+919326350896' },
+        { text: '+918668925184', link: 'sms:+918668925184' },
+      ],
+      delay: 0.6,
+    },
+  ];
+
+  const handleImageClick = (src) => {
+    setImageSrc(src);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleBackgroundClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    handleClose();
+  };
+
   return (
     <div className="container mx-auto p-6">
-      <motion.h1
-        className="text-4xl font-bold text-center mb-6"
+      <motion.div
+        className="flex flex-col md:flex-row items-center justify-center py-20"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Consultancy by Raju Choubey
-      </motion.h1>
+        <motion.img
+          src="src/assets/JP.jpg" 
+          alt="Consultant Raju Choubey"
+          className="w-32 h-32 rounded-full mb-6 md:mb-0 md:mr-6 cursor-pointer"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          onClick={() => handleImageClick("src/assets/JP.jpg")} 
+        />
+        <motion.h1
+          className="text-4xl font-bold text-center"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Consultant Raju Choubey
+        </motion.h1>
+      </motion.div>
+
       <motion.p
         className="text-lg text-center mb-6"
         initial={{ opacity: 0, x: 50 }}
@@ -66,7 +109,7 @@ const Consultancy = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <h2 className="text-2xl font-bold text-blue-800 mb-4">
+        <h2 className="text-2xl font-bold text-center text-blue-800 mb-4">
           State & Central Textile Subsidy
         </h2>
         <p className="text-md text-blue-700">
@@ -100,13 +143,46 @@ const Consultancy = () => {
             <span className="text-3xl text-blue-600 mr-4">{info.icon}</span>
             <div>
               <h2 className="text-xl font-semibold">{info.title}</h2>
-              <a href={info.link} className="text-blue-600 underline hover:text-blue-800">
-                {info.text}
-              </a>
+              {info.contacts ? (
+                info.contacts.map((contact, index) => (
+                  <a
+                    key={index}
+                    href={contact.link}
+                    className="block text-blue-600 underline hover:text-blue-800"
+                  >
+                    {contact.text}
+                  </a>
+                ))
+              ) : (
+                <a
+                  href={info.link}
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  {info.text}
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
       </motion.div>
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          onClick={handleBackgroundClick} 
+          onTouchEnd={handleTouchEnd}
+        >
+          <motion.img
+            src={imageSrc}
+            alt="Enlarged view"
+            className="max-w-full max-h-full cursor-pointer"
+            onClick={handleClose}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      )}
     </div>
   );
 };

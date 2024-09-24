@@ -1,4 +1,3 @@
-
 .wrapper {
   display: flex;
   justify-content: center;
@@ -16,7 +15,6 @@
   box-sizing: border-box;
   margin-top: -140px;
   margin-bottom: 140px;
-
   padding: 0;
 }
 
@@ -33,7 +31,7 @@
   transform: scale(1.05);
 }
 
-.dark .img-holder{
+.dark .img-holder {
   box-shadow: 0 4px 15px rgba(248, 248, 248, 0.801);
 }
 
@@ -90,11 +88,10 @@
 }
 
 .large-image {
-  max-width: 480px;
-  max-height: 480px;
-  margin-top: 160px ;
-  width: 480px;
-  height: 480px;
+  max-width: 90%; 
+  max-height: 90%; 
+  margin-top: 160px; 
+  height: auto; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
   box-sizing: border-box;
   border: 0;
@@ -110,27 +107,22 @@
   color: #fff;
   border: none;
   padding: 15px 20px;
-  margin-top: 80px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed; 
+  top: 50%; 
+  transform: translateY(-50%); 
   font-size: 2em;
   border-radius: 50%;
-}
-
-.prev-button:hover,
-.next-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1001;
 }
 
 .prev-button {
-  left: -400px;
+  left: 20px; 
 }
 
 .next-button {
-  right: -400px;
+  right: 20px; 
 }
 
 .bottom-bar {
@@ -174,17 +166,18 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
   }
 
-  .close-icon-btn{
+  .close-icon-btn {
     margin-top: -60px;
   }
 
-  .dark .img-holder{
+  .dark .img-holder {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.507);
   }
 
   .img-holder img {
     width: 100%;
     height: 100%;
+    object-fit: cover; 
   }
 
   .lg-img-hldr {
@@ -192,9 +185,8 @@
   }
 
   .large-image {
-    width: 400px;
-    height: auto; 
-    box-shadow: none; 
+    max-width: 80%;
+    max-height: 80%;
     margin-top: 150px;
   }
 
@@ -212,7 +204,7 @@
 
   .prev-button,
   .next-button {
-    display: none;
+    display: none; 
   }
 }
 
@@ -223,10 +215,10 @@
     height: 160px; 
     margin-bottom: 140px;
   }
-  .top-bar{
+  .top-bar {
     margin-top: 50px;
   }
-  .large-image{
+  .large-image {
     margin-top: 20px;
   }
 

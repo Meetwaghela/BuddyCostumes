@@ -6,14 +6,22 @@ import LargeImage from './LargeImg';
 
 const Gallery = () => {
     const [imgLst] = useState([
-        { imgSrc: 'src/assets/Gallery/Gallery.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery2.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery1.jpg' },
         { imgSrc: 'src/assets/Gallery/Gallery3.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery4.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery3.webp' },
+        { imgSrc: 'src/assets/Gallery/Gallery4.jpeg' },
         { imgSrc: 'src/assets/Gallery/Gallery5.jpg' },
-        { imgSrc: 'src/assets/home.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' },
-        { imgSrc: 'src/assets/demo.jpg' }
+        { imgSrc: 'src/assets/Gallery/Gallery6.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery7.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery8.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery9.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery10.jpeg' },
+        { imgSrc: 'src/assets/Gallery/Gallery11.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery12.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery13.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery14.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery15.jpg' },
+        { imgSrc: 'src/assets/Gallery/Gallery16.jpg' },
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imgStyle, setImgStyle] = useState({
@@ -124,7 +132,6 @@ const Gallery = () => {
                     </button>
                 ))}
             </div>
-            <button onClick={handleBackClick}>Back</button>
         </React.Fragment>
     );
 };
