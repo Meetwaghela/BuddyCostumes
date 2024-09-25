@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import JP from "../../assets/JP.jpg";
 
-
 const Footer = () => {
   return (
     <div className="rounded-b-3xl rounded-t-3xl bg-gradient-to-r from-blue-700 via-violet-700 via-20% via-purple-700 to-red-700 pt-20 dark:bg-gray-800">
@@ -126,7 +125,7 @@ const Footer = () => {
                     Go
                   </button>
                 </form>
-                <div className="mt-6 flex items-center gap-3">
+                <div className="flex items-center gap-3 mt-4"> {/* Increased margin-top for spacing */}
                   <a
                     href="https://wa.me/+919970751651"
                     aria-label="WhatsApp"

@@ -6,8 +6,8 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6; /* Light Gray */
-    color: #111827; /* Dark Text */
+    background-color: #f3f4f6; 
+    color: #111827; 
     line-height: 1.6;
   }
   
@@ -17,12 +17,12 @@
     padding: 20px;
   }
   
-  /* Hero Section */
+ 
   .hero-section {
     text-align: center;
     padding: 50px 0;
-    background-color: #1e3a8a; /* Dark Blue */
-    color: #ffffff; /* Light Text */
+    background-color: #1e3a8a; 
+    color: #ffffff; 
   }
   
   .hero-title {
@@ -34,10 +34,9 @@
   .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #dbeafe; /* Soft Light Blue */
+    color: #dbeafe; 
   }
   
-  /* Service Section */
   .service-section {
     padding: 40px 0;
   }
@@ -46,7 +45,7 @@
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
-    color: #1e3a8a; /* Dark Blue */
+    color: #1e3a8a; 
   }
   
   .service-cards {
@@ -56,7 +55,7 @@
   }
   
   .service-card {
-    background-color: #f9fafb; /* Soft White */
+    background-color: #f9fafb; 
     width: 30%;
     padding: 20px;
     margin: 10px;
@@ -71,43 +70,41 @@
   
   .service-title {
     font-size: 1.8rem;
-    color: #1e3a8a; /* Dark Blue */
+    color: #1e3a8a;
     margin-bottom: 15px;
   }
   
   .service-description {
     font-size: 1.1rem;
-    color: #4b5563; /* Medium Gray */
+    color: #4b5563; 
   }
   
-  /* Installation Section */
   .installation-section {
     padding: 40px 0;
-    background-color: #e5e7eb; /* Lighter Gray */
+    background-color: #e5e7eb;
     text-align: center;
   }
   
   .section-description {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #1e3a8a; /* Dark Blue */
+    color: #1e3a8a;
   }
   
   .installation-list {
     list-style: none;
     font-size: 1.2rem;
-    color: #4b5563; /* Medium Gray */
+    color: #4b5563;
   }
   
   .installation-list li {
     padding: 10px 0;
   }
   
-  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
-    background-color: #1e3a8a; /* Dark Blue */
+    background-color: #1e3a8a;
     color: white;
   }
   
@@ -117,56 +114,60 @@
   
   footer strong {
     font-weight: bold;
-    color: #ef4444; /* Accent Red */
+    color: #ef4444;
+    
   }
   
-  /* Dark Mode */
+  .dark  footer strong {
+    font-weight: bold;
+    color: #f7f7f7;
+  }
+
   .dark {
-    background-color: #111827; /* Dark Background */
+    background-color: #111827; 
   }
   
   .dark .hero-section {
-    background-color: #1e293b; /* Deep Gray Blue */
+    background-color: #1e293b; 
   }
   
   .dark .hero-title,
   .dark .section-title {
-    color: #f3f4f6; /* Soft Gray for Text */
+    color: #f3f4f6; 
   }
   
   .dark .hero-subtitle {
-    color: #dbeafe; /* Light Blue */
+    color: #dbeafe; 
   }
   
   .dark .service-card {
-    background-color: #1e293b; /* Deep Gray Blue */
+    background-color: #1e293b; 
   }
   
   .dark .service-title {
-    color: #93c5fd; /* Light Blue */
+    color: #93c5fd; 
   }
   
   .dark .service-description {
-    color: #e5e7eb; /* Light Gray */
+    color: #e5e7eb; 
   }
   
   .dark .installation-section {
-    background-color: #374151; /* Charcoal Gray */
+    background-color: #374151; 
   }
   
   .dark .footer {
-    background-color: #111827; /* Very Dark */
+    background-color: #111827; 
   }
   
   .dark .footer-text {
-    color: #ef4444; /* Accent Red */
+    color: #ef4444; 
   }
   
   .dark .section-description, .dark .installation-list {
-    color: #e5e7eb; /* Light Gray */
+    color: #e5e7eb; 
   }
-  
-  /* Media Queries for Responsiveness */
+
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2.5rem;
@@ -192,14 +193,6 @@
     .service-description {
       font-size: 1rem;
     }
-  }
-  .contact-link {
-    color: #ef4444;
-    text-decoration: none;
-  }
-  
-  .contact-link:hover {
-    text-decoration: underline;
   }
   
   

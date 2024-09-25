@@ -54,10 +54,10 @@ const Solutions = () => {
 
         <p className="footer-text">
            Ready to elevate your electrical infrastructure? 
-            <a href="/ContactUs" className="contact-link">
-                <strong>Contact us today</strong>
+            <a href="/ContactUs" className="contact-link dark:text-blue">
+                <strong> Contact us </strong>
             </a> 
-            and let’s bring your vision to life with innovative, high-performance solutions. We’re here to power your next success story!
+            today and let’s bring your vision to life with innovative, high-performance solutions. We’re here to power your next success story!
         </p>
       </footer>
     </div>
