@@ -10,9 +10,9 @@ const Maintenance = () => {
   };
 
   const images = [
-    { src: 'src/components/assets/Maintenance/M1.png', alt: 'JP', content: 'Hi Code is working' },
-    { src: 'src/components/assets/Maintenance/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if I wrote more content what will happen to hover' },
-    { src: 'src/components/assets/Maintenance/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/components/assets/M1.png', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/components/assets/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if I wrote more content what will happen to hover' },
+    { src: 'src/components/assets/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
     { src: 'src/components/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
   ];
 

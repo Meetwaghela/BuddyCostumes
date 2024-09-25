@@ -6,22 +6,22 @@ import LargeImage from './LargeImg';
 
 const Gallery = () => {
     const [imgLst] = useState([
-        { imgSrc: 'src/components/assets/Gallery/Gallery1.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery3.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery3.webp' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery4.jpeg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery5.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery6.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery7.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery8.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery9.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery10.jpeg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery11.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery12.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery13.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery14.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery15.jpg' },
-        { imgSrc: 'src/components/assets/Gallery/Gallery16.jpg' },
+        { imgSrc: 'src/components/assets/Gallery1.jpg' },
+        { imgSrc: 'src/components/assets/Gallery3.jpg' },
+        { imgSrc: 'src/components/assets/Gallery3.webp' },
+        { imgSrc: 'src/components/assets/Gallery4.jpeg' },
+        { imgSrc: 'src/components/assets/Gallery5.jpg' },
+        { imgSrc: 'src/components/assets/Gallery6.jpg' },
+        { imgSrc: 'src/components/assets/Gallery7.jpg' },
+        { imgSrc: 'src/components/assets/Gallery8.jpg' },
+        { imgSrc: 'src/components/assets/Gallery9.jpg' },
+        { imgSrc: 'src/components/assets/Gallery10.jpeg' },
+        { imgSrc: 'src/components/assets/Gallery11.jpg' },
+        { imgSrc: 'src/components/assets/Gallery12.jpg' },
+        { imgSrc: 'src/components/assets/Gallery13.jpg' },
+        { imgSrc: 'src/components/assets/Gallery14.jpg' },
+        { imgSrc: 'src/components/assets/Gallery15.jpg' },
+        { imgSrc: 'src/components/assets/Gallery16.jpg' },
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imgStyle, setImgStyle] = useState({
