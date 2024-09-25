@@ -15,11 +15,11 @@ const Home = () => {
             <h1 className="text-5xl">
               Expert Electrical Contracting Services
             </h1>
-            <p className="text-xl">
+            {/* <p className="text-xl">
               <b>Krishna Electricals </b>is dedicated to delivering top-quality electrical solutions. 
               We serve various industries like textiles, pharmaceuticals, paper mills, warehouses and more. 
               Our focus on excellence helps us stay at the top of the industry. 
-            </p>
+            </p> */}
             <div className=" Button space-x-4">
               <button className="btn-primary"><a href="/ContactUs">
                 Get Started
