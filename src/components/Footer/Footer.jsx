@@ -76,7 +76,7 @@ const Footer = () => {
                   <a href="/Gallery">Gallery</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/Payment">Payments</a>
+                  <a href="/Payment">Payment Details</a>
                 </li>
               </ul>
             </div>

@@ -133,7 +133,7 @@ const Navbar = () => {
                               </a>
                             </li>
                             <li className="cursor-pointer text-black/80 hover:text-primary">
-                            <a href="/Solution">
+                            <a href="/Solutions">
                               Electrical Solutions
                               </a>
                             </li>
@@ -142,11 +142,11 @@ const Navbar = () => {
                             <h1 className="pb-1 text-xl font-semibold">
                               Other Services
                             </h1>
-                            <li className="cursor-pointer text-black/80 hover:text-primary">
+                            {/* <li className="cursor-pointer text-black/80 hover:text-primary">
                             <a href="/Contracting">
                               Electrical Contracting
                               </a>
-                            </li>
+                            </li> */}
                             <li className="cursor-pointer text-black/80 hover:text-primary">
                             <a href="/Maintenance">
                               Electrical Maintenance

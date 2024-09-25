@@ -22,6 +22,7 @@ import Clients from './Pages/Clients';
 import Consultancy from './Pages/Consultancy';
 import Innovative from './components/Service/Innovative';
 import Payment from './Pages/Payment';
+import Solutions from './components/Service/Solutions';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/Consultancy" element={<Consultancy />} />
         <Route path="/Innovative" element={<Innovative />} />
         <Route path="/Payment" element={<Payment />} />
+        <Route path="/Solutions" element={<Solutions />} />
         <Route
           path="/"
           element={

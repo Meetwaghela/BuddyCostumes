@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6; /* Light Gray */
+    color: #111827; /* Dark Text */
+    line-height: 1.6;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #1e3a8a; /* Dark Blue */
+    color: #ffffff; /* Light Text */
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #dbeafe; /* Soft Light Blue */
+  }
+  
+  /* Service Section */
+  .service-section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3a8a; /* Dark Blue */
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #f9fafb; /* Soft White */
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+    color: #1e3a8a; /* Dark Blue */
+    margin-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 1.1rem;
+    color: #4b5563; /* Medium Gray */
+  }
+  
+  /* Installation Section */
+  .installation-section {
+    padding: 40px 0;
+    background-color: #e5e7eb; /* Lighter Gray */
+    text-align: center;
+  }
+  
+  .section-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #1e3a8a; /* Dark Blue */
+  }
+  
+  .installation-list {
+    list-style: none;
+    font-size: 1.2rem;
+    color: #4b5563; /* Medium Gray */
+  }
+  
+  .installation-list li {
+    padding: 10px 0;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a8a; /* Dark Blue */
+    color: white;
+  }
+  
+  .footer-text {
+    font-size: 1.1rem;
+  }
+  
+  footer strong {
+    font-weight: bold;
+    color: #ef4444; /* Accent Red */
+  }
+  
+  /* Dark Mode */
+  .dark {
+    background-color: #111827; /* Dark Background */
+  }
+  
+  .dark .hero-section {
+    background-color: #1e293b; /* Deep Gray Blue */
+  }
+  
+  .dark .hero-title,
+  .dark .section-title {
+    color: #f3f4f6; /* Soft Gray for Text */
+  }
+  
+  .dark .hero-subtitle {
+    color: #dbeafe; /* Light Blue */
+  }
+  
+  .dark .service-card {
+    background-color: #1e293b; /* Deep Gray Blue */
+  }
+  
+  .dark .service-title {
+    color: #93c5fd; /* Light Blue */
+  }
+  
+  .dark .service-description {
+    color: #e5e7eb; /* Light Gray */
+  }
+  
+  .dark .installation-section {
+    background-color: #374151; /* Charcoal Gray */
+  }
+  
+  .dark .footer {
+    background-color: #111827; /* Very Dark */
+  }
+  
+  .dark .footer-text {
+    color: #ef4444; /* Accent Red */
+  }
+  
+  .dark .section-description, .dark .installation-list {
+    color: #e5e7eb; /* Light Gray */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .service-card {
+      width: 45%;
+      margin: 15px 0;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .service-title {
+      font-size: 1.6rem;
+    }
+  
+    .service-description {
+      font-size: 1rem;
+    }
+  }
+  .contact-link {
+    color: #ef4444;
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 576px) {
+    .services-container {
+      padding: 10px;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .service-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-card {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .service-title {
+      font-size: 1.4rem;
+    }
+  
+    .service-description {
+      font-size: 0.9rem;
+    }
+  
+    .installation-list {
+      font-size: 1rem;
+    }
+  }
+  
