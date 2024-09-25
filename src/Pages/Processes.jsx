@@ -28,12 +28,12 @@ const Processes = () => {
   return (
     <section>
       <div>
-        <h1 className="text-5xl font-bold text-center dark:text-white mt-40">Our Process</h1>
+        <h1 className="text-5xl font-bold text-center dark:text-white mt-20">Our Process</h1>
         <h2 className="text-xl italic text-center dark:text-white mt-4 mb-10">
           Our data-driven process unlocks your electrical potential. Discover how we turn insights into impactful <br />Electrical solutions.
         </h2>
       </div>
-      <div className="bg-white py-12 dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-900">
         <div className="text-center mb-8 dark:bg-gray-900 mt-2">
           <h4 className="text-xl font-semibold text-gray-500 dark:text-white">How it works</h4>
           <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
@@ -120,7 +120,6 @@ const Processes = () => {
               autoPlay 
               muted 
               loop 
-              // controls = {onClick}
               className={`rounded-lg shadow-lg ${isZoomed ? 'w-full h-full' : 'w-800'}`} 
               width="800" 
               onClick={handleVideoClick}

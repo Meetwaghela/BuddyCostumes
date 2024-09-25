@@ -9,7 +9,7 @@
 
   @layer utilities {
     .bg-navbar {
-      @apply bg-gradient-to-r from-blue-700 via-purple-700 to-red-700 dark:bg-gray-800;
+      @apply bg-gradient-to-r from-blue-700 via-violet-700 via-40% via-purple-700 to-red-700 dark:bg-gray-800;
     }
     
   .btn-primary {

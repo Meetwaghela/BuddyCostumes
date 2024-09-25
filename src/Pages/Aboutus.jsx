@@ -26,9 +26,6 @@ const Aboutus = () => {
                             Our vision is to be the leading electrical contracting provider, delivering top-quality services 
                             that power businesses and drive success.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-                            Learn more
-                        </button>
                     </div>
 
 

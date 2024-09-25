@@ -110,9 +110,9 @@ const ContactUs = () => {
 
   return (
     <section className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
-      <div className="container mx-auto py-40 px-10">
+      <div className="container mx-auto py-20 px-10">
         <h1 className="text-5xl font-bold text-center mb-10">Contact Us</h1>
-        <h2 className="text-xl font-semibold text-center mb-28">
+        <h2 className="text-xl font-semibold text-center mb-20">
           We are always available to answer your queries, offer advice, and discuss your electrical requirements. Get in touch with us through any of the contact details provided below.
         </h2>
         <h1 className="text-2xl font-semibold text-center mb-2">Contact us today to schedule a consultation</h1>

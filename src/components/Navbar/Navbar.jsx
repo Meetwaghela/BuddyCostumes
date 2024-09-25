@@ -82,10 +82,10 @@ const Navbar = () => {
                       </li>
                       <li className="p-2 hover:bg-violet-200 transition-colors duration-300 rounded">
                         <a
-                          href="/Payment"
+                          href="/Consultancy"
                           className="text-gray-700 hover:text-violet-600"
                         >
-                          Payment Details
+                          Consultant
                         </a>
                       </li>
                     </ul>

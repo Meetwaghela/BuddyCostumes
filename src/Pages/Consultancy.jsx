@@ -67,7 +67,7 @@ const Consultancy = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 ">
       <motion.div
         className="flex flex-col md:flex-row items-center justify-center py-20"
         initial={{ opacity: 0, y: -50 }}
@@ -84,7 +84,7 @@ const Consultancy = () => {
           onClick={() => handleImageClick("src/assets/JP.jpg")} 
         />
         <motion.h1
-          className="text-4xl font-bold text-center"
+          className="text-4xl font-bold text-center dark:text-white"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -94,7 +94,7 @@ const Consultancy = () => {
       </motion.div>
 
       <motion.p
-        className="text-lg text-center mb-6"
+        className="text-lg text-center mb-6 dark:text-white"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
@@ -104,15 +104,15 @@ const Consultancy = () => {
       </motion.p>
 
       <motion.div
-        className="bg-blue-100 p-6 rounded-lg shadow-lg mb-8"
+        className="bg-blue-100 p-6 rounded-lg shadow-lg mb-8 "
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <h2 className="text-2xl font-bold text-center text-blue-800 mb-4">
+        <h2 className="text-2xl font-bold text-center text-blue-800 mb-4 ">
           State & Central Textile Subsidy
         </h2>
-        <p className="text-md text-blue-700">
+        <p className="text-md text-blue-700 ">
           We assist businesses in navigating and securing textile subsidies from
           both state and central governments. These subsidies are essential for
           the growth and development of textile industries, offering financial
@@ -133,7 +133,7 @@ const Consultancy = () => {
         {contactInfo.map((info) => (
           <motion.div
             key={info.id}
-            className="p-4 border rounded-md shadow-lg flex items-center transition-transform transform hover:scale-105 bg-white hover:bg-blue-50"
+            className="p-4 border rounded-md shadow-lg flex items-center transition-transform transform hover:scale-105 bg-white hover:bg-blue-50 dark:bg-gray-700 dark:text-white"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
