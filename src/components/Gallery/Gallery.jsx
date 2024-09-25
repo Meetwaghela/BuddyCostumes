@@ -6,22 +6,22 @@ import LargeImage from './LargeImg';
 
 const Gallery = () => {
     const [imgLst] = useState([
-        { imgSrc: 'src/assets/Gallery/Gallery1.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery3.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery3.webp' },
-        { imgSrc: 'src/assets/Gallery/Gallery4.jpeg' },
-        { imgSrc: 'src/assets/Gallery/Gallery5.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery6.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery7.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery8.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery9.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery10.jpeg' },
-        { imgSrc: 'src/assets/Gallery/Gallery11.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery12.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery13.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery14.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery15.jpg' },
-        { imgSrc: 'src/assets/Gallery/Gallery16.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery1.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery3.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery3.webp' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery4.jpeg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery5.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery6.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery7.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery8.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery9.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery10.jpeg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery11.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery12.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery13.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery14.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery15.jpg' },
+        { imgSrc: 'src/components/assets/Gallery/Gallery16.jpg' },
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imgStyle, setImgStyle] = useState({
@@ -85,7 +85,7 @@ const Gallery = () => {
         let title = '';
         let details = '';
 
-        if (selectedImage.imgSrc === 'src/assets/JP.jpg') {
+        if (selectedImage.imgSrc === 'src/components/assets/JP.jpg') {
             title = 'Hello';
             details = 'Code Working perfectly';
         }

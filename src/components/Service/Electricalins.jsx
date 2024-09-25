@@ -11,20 +11,20 @@ const Electricalins = () => {
   };
 
   const images = [
-    { src: 'src/assets/Installation/2pole1.png', alt: '', content: '2 Pole Structure' },
-    { src: 'src/assets/Installation/2pole2.png', alt: '', content: 'Mounted TR Two pole Structure' },
-    { src: 'src/assets/Installation/Outdoor.jpg', alt: '', content: 'Hi Code is working' },
-    { src: 'src/assets/Installation/Out2.jpg', alt: '', content: 'Installation of Outdoor Type Substation' },
-    { src: 'src/assets/Installation/out3.png', alt: '', content: 'Installation of Outdoor Type Substation' },
-    { src: 'src/assets/Installation/out4.jpg', alt: '', content: 'Installation of Outdoor Type Substation' },
-    { src: 'src/assets/Installation/Ind.jpg', alt: '', content: 'Installation of Indoor type Substation' },
-    { src: 'src/assets/Installation/ind2.jpg', alt: '', content: 'This is how indoor substation look like from inside' },
-    { src: 'src/assets/Installation/ind3.jpg', alt: '', content: 'Installation of Indoor type Substation' },
-    { src: 'src/assets/Installation/FSP.jpg', alt: '', content: 'Installation of 2 Way Feeder Pillar' },
-    { src: 'src/assets/Installation/FSP2.png', alt: '', content: 'Installation of 8 Way Feeder Pillar' },
-    { src: 'src/assets/Installation/Panel.jpg', alt: '', content: 'Installation of Panel' },
-    { src: 'src/assets/Installation/Cable Lay.jpg', alt: '', content: 'Cable Laying' },
-    { src: 'src/assets/Installation/Cable Termi.jpg', alt: '', content: 'Cable Termination' },
+    { src: 'src/components/assets/Installation/2pole1.png', alt: '', content: '2 Pole Structure' },
+    { src: 'src/components/assets/Installation/2pole2.png', alt: '', content: 'Mounted TR Two pole Structure' },
+    { src: 'src/components/assets/Installation/Outdoor.jpg', alt: '', content: 'Hi Code is working' },
+    { src: 'src/components/assets/Installation/Out2.jpg', alt: '', content: 'Installation of Outdoor Type Substation' },
+    { src: 'src/components/assets/Installation/out3.png', alt: '', content: 'Installation of Outdoor Type Substation' },
+    { src: 'src/components/assets/Installation/out4.jpg', alt: '', content: 'Installation of Outdoor Type Substation' },
+    { src: 'src/components/assets/Installation/Ind.jpg', alt: '', content: 'Installation of Indoor type Substation' },
+    { src: 'src/components/assets/Installation/ind2.jpg', alt: '', content: 'This is how indoor substation look like from inside' },
+    { src: 'src/components/assets/Installation/ind3.jpg', alt: '', content: 'Installation of Indoor type Substation' },
+    { src: 'src/components/assets/Installation/FSP.jpg', alt: '', content: 'Installation of 2 Way Feeder Pillar' },
+    { src: 'src/components/assets/Installation/FSP2.png', alt: '', content: 'Installation of 8 Way Feeder Pillar' },
+    { src: 'src/components/assets/Installation/Panel.jpg', alt: '', content: 'Installation of Panel' },
+    { src: 'src/components/assets/Installation/Cable Lay.jpg', alt: '', content: 'Cable Laying' },
+    { src: 'src/components/assets/Installation/Cable Termi.jpg', alt: '', content: 'Cable Termination' },
   ];
 
   return (

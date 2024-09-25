@@ -3,10 +3,10 @@ import { BiPhoneCall, BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { FaCaretDown } from "react-icons/fa";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
-import img3 from "../../assets/3.jpg";
-import img1 from "../../assets/1.jpg";
-import JP from "../../assets/JP.jpg";
-import logo from "../../assets/Log.png";
+import img3 from "../../components/assets/3.jpg";
+import img1 from "../../components/assets/1.jpg";
+import JP from "../../components/assets/JP.jpg";
+import logo from "../../components/assets/Log.png";
 import "./ResponsiveMenu.css";
 import { motion } from "framer-motion";
 

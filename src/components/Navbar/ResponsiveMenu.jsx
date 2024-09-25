@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ResponsiveMenu.css";
-import JP from "../../assets/JP.jpg";
+import JP from "../../components/assets/JP.jpg";
 
 const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
   const [isPhotoLarge, setIsPhotoLarge] = useState(false);

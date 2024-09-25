@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import VideoFile from '../assets/Vone.mp4';
+import VideoFile from '../components/assets/Vone.mp4';
 
 const slideInFromLeft = (delay) => ({
   initial: {
