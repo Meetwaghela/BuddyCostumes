@@ -75,7 +75,7 @@ const Consultancy = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.img
-          src="src/assets/JP.jpg" 
+          src="/assets/JP.jpg" 
           alt="no image"
           className="w-32 h-32 rounded-full mb-6 md:mb-0 md:mr-6 cursor-pointer"
           initial={{ opacity: 0, scale: 0.8 }}

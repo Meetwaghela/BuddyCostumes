@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import img5 from "../../components/assets/5.webp";
+import img5 from "/assets/5.webp";
 import ProgressBar from './ProgressBar';
 
 const slideAnimation = (direction, delay) => {

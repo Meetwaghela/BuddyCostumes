@@ -31,16 +31,16 @@ const Innovative = () => {
       <section className="mb-10">
         <h2 className="text-3xl font-semibold text-green-600">See It in Action!</h2>
         <div className="flex flex-wrap justify-center mt-4">
-          <img src="src/components/assets/Solar/Solar1.jpg" alt="Solar Installation" className="w-1/2 md:w-1/3 p-2" />
-          <img src="src/components/assets/Solar/Solar2.jpg" alt="Energy Savings" className="w-1/2 md:w-1/3 p-2" />
-          <img src="src/components/assets/Solar/Solar3.jpg" alt="Maintenance Support" className="w-1/2 md:w-1/3 p-2" />
+          <img src="/assets/Solar1.jpg" alt="Solar Installation" className="w-1/2 md:w-1/3 p-2" />
+          <img src="/assets/Solar2.jpg" alt="Energy Savings" className="w-1/2 md:w-1/3 p-2" />
+          <img src="/assets/Solar3.jpg" alt="Maintenance Support" className="w-1/2 md:w-1/3 p-2" />
         </div>
         <div className="mt-4">
           <video width="100%" 
               autoPlay
               muted 
               loop >
-            <source src="src/components/assets/Solar/Solar5.mp4" type="video/mp4" />
+            <source src="/assets/Solar5.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

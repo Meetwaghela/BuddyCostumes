@@ -6,22 +6,22 @@ import LargeImage from './LargeImg';
 
 const Gallery = () => {
     const [imgLst] = useState([
-        { imgSrc: 'src/components/assets/Gallery1.jpg' },
-        { imgSrc: 'src/components/assets/Gallery3.jpg' },
-        { imgSrc: 'src/components/assets/Gallery3.webp' },
-        { imgSrc: 'src/components/assets/Gallery4.jpeg' },
-        { imgSrc: 'src/components/assets/Gallery5.jpg' },
-        { imgSrc: 'src/components/assets/Gallery6.jpg' },
-        { imgSrc: 'src/components/assets/Gallery7.jpg' },
-        { imgSrc: 'src/components/assets/Gallery8.jpg' },
-        { imgSrc: 'src/components/assets/Gallery9.jpg' },
-        { imgSrc: 'src/components/assets/Gallery10.jpeg' },
-        { imgSrc: 'src/components/assets/Gallery11.jpg' },
-        { imgSrc: 'src/components/assets/Gallery12.jpg' },
-        { imgSrc: 'src/components/assets/Gallery13.jpg' },
-        { imgSrc: 'src/components/assets/Gallery14.jpg' },
-        { imgSrc: 'src/components/assets/Gallery15.jpg' },
-        { imgSrc: 'src/components/assets/Gallery16.jpg' },
+        { imgSrc: '/assets/Gallery1.jpg' },
+        { imgSrc: '/assets/Gallery3.jpg' },
+        { imgSrc: '/assets/Gallery3.webp' },
+        { imgSrc: '/assets/Gallery4.jpeg' },
+        { imgSrc: '/assets/Gallery5.jpg' },
+        { imgSrc: '/assets/Gallery6.jpg' },
+        { imgSrc: '/assets/Gallery7.jpg' },
+        { imgSrc: '/assets/Gallery8.jpg' },
+        { imgSrc: '/assets/Gallery9.jpg' },
+        { imgSrc: '/assets/Gallery10.jpeg' },
+        { imgSrc: '/assets/Gallery11.jpg' },
+        { imgSrc: '/assets/Gallery12.jpg' },
+        { imgSrc: '/assets/Gallery13.jpg' },
+        { imgSrc: '/assets/Gallery14.jpg' },
+        { imgSrc: '/assets/Gallery15.jpg' },
+        { imgSrc: '/assets/Gallery16.jpg' },
     ]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imgStyle, setImgStyle] = useState({
@@ -85,7 +85,7 @@ const Gallery = () => {
         let title = '';
         let details = '';
 
-        if (selectedImage.imgSrc === 'src/components/assets/JP.jpg') {
+        if (selectedImage.imgSrc === '/assets/JP.jpg') {
             title = 'Hello';
             details = 'Code Working perfectly';
         }
