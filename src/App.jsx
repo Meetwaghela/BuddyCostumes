@@ -72,7 +72,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import ResponsiveMenu from './components/Navbar/ResponsiveMenu';
 import Footer from './components/Footer/Footer';
-
 const Home = lazy(() => import('./components/Home/Home'));
 const Overview = lazy(() => import('./components/Overview/Overview'));
 const BannerDetails = lazy(() => import('./components/BannerDetails/BannerDetails'));

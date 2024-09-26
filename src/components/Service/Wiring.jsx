@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Electricalins.css';
+import Wirimg1 from '../../components/assets/Wirimg.jpeg';
+import Wirimg2 from '../../components/assets/Wirimg (2).jpeg';
+import Wirimg3 from '../../components/assets/Wirimg (3).jpeg';
+import WirimgVideo from '../../components/assets/Wirimg (1).mp4';
 
 const Wiring = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -11,10 +15,10 @@ const Wiring = () => {
   };
 
   const images = [
-    { src: 'src/components/assets/Wirimg.jpeg', alt: 'Image 1', content: 'Hi Code is working', type: 'image' },
-    { src: 'src/components/assets/Wirimg (2).jpeg', alt: 'Image 2', content: 'Kinda Not working and what if I wrote more content what will happen on hover', type: 'image' },
-    { src: 'src/components/assets/Wirimg (3).jpeg', alt: 'Image 3', content: 'Hi Code is working', type: 'image' },
-    { src: 'src/components/assets/Wirimg (1).mp4', alt: 'Video 1', content: 'Hi Code is working', type: 'video' },
+    { src: Wirimg1, alt: 'Industrial Wiring Image 1', content: 'A close-up view of high-quality industrial wiring installation demonstrating proper cable management and safety practices.', type: 'image' },
+    { src: Wirimg2, alt: 'Industrial Wiring Image 2', content: 'An example of complex wiring configurations in an industrial setting, showcasing the integration of various systems for efficient operation.', type: 'image' },
+    { src: Wirimg3, alt: 'Industrial Wiring Image 3', content: 'Illustration of wiring connections to heavy machinery, highlighting the importance of secure and efficient electrical systems.', type: 'image' },
+    { src: WirimgVideo, alt: 'Industrial Wiring Video', content: 'A video showcasing the process of installing and testing industrial wiring systems, providing insights into safety and efficiency practices.', type: 'video' },
   ];
 
   return (

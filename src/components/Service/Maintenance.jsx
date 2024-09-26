@@ -1,19 +1,40 @@
 import React, { useState } from 'react';
 import './Electricalins.css'; 
+import M1 from '../../components/assets/M1.png';
+import M2 from '../../components/assets/M2.jpg';
+import M3 from '../../components/assets/M3.jpg';
+import demo from '../../components/assets/demo.jpg';
 
 const Maintenance = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [clickedIndex, setClickedIndex] = useState(null); 
+
   const handleClick = (index) => {
     setActiveIndex(index);
     setClickedIndex(index === clickedIndex ? null : index); 
   };
 
   const images = [
-    { src: 'src/components/assets/M1.png', alt: 'JP', content: 'Hi Code is working' },
-    { src: 'src/components/assets/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if I wrote more content what will happen to hover' },
-    { src: 'src/components/assets/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
-    { src: 'src/components/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
+    { 
+      src: M1, 
+      alt: 'Transformer Installation', 
+      content: 'Expert installation of a transformer, ensuring optimal placement and connection for efficient power distribution and reliability.'
+    },
+    { 
+      src: M2, 
+      alt: 'Component Replacement', 
+      content: 'Replacing a faulty component of the transformer to enhance its performance, followed by thorough safety checks to prevent future issues.'
+    },
+    { 
+      src: M3, 
+      alt: 'Preventive Maintenance', 
+      content: 'Conducting routine preventive maintenance on transformers to identify wear and tear, ensuring longevity and operational efficiency.'
+    },
+    { 
+      src: demo, 
+      alt: 'Overview of Maintenance Tasks', 
+      content: 'A comprehensive overview of various maintenance tasks performed on electrical systems, highlighting the importance of regular upkeep and inspections.'
+    },
   ];
 
   return (

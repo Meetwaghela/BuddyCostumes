@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Gallery.css";
 import Img from "./Img";
 import LargeImage from "./LargeImg";
-import closeButtonImg from '../assets/x-button.png';
+// import closeButtonImg from '../assets/x-button.png';
 import Gallery1 from "../../components/assets/Gallery1.jpg";
 import Gallery2 from "../../components/assets/Gallery2.jpg";
 import Gallery3 from "../../components/assets/Gallery3.jpg";

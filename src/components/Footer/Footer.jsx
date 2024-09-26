@@ -62,14 +62,14 @@ const Footer = () => {
           <div className="col-span-2 grid grid-cols-2 sm:grid-cols-3 md:pl-10">
             <div className="px-4 py-8">
               <h1 className="mb-3 text-justify text-xl font-bold sm:text-left sm:text-xl">
-                Important Links
+                Useful Links
               </h1>
               <ul className="flex flex-col gap-3">
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                   <a href="/">Home</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/aboutus">About us</a>
+                  <a href="/ContactUs">Contact us</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                   <a href="/Gallery">Gallery</a>
@@ -88,7 +88,7 @@ const Footer = () => {
                   <a href="/Service">Our Services</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
-                  <a href="/ContactUs">Contact us</a>
+                  <a href="/aboutus">About us</a>
                 </li>
                 <li className="cursor-pointer transition-all duration-300 hover:translate-x-[2px]">
                   <a href="/Privacy">Privacy Policy</a>

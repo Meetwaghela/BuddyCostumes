@@ -1,4 +1,8 @@
 import React from 'react';
+import Solar1 from '../../components/assets/Solar1.jpg';
+import Solar2 from '../../components/assets/Solar2.jpg';
+import Solar3 from '../../components/assets/Solar3.jpg';
+import SolarVideo from '../../components/assets/Solar5.mp4';
 
 const Innovative = () => {
   return (
@@ -31,16 +35,13 @@ const Innovative = () => {
       <section className="mb-10">
         <h2 className="text-3xl font-semibold text-green-600">See It in Action!</h2>
         <div className="flex flex-wrap justify-center mt-4">
-          <img src="src/components/assets/Solar/Solar1.jpg" alt="Solar Installation" className="w-1/2 md:w-1/3 p-2" />
-          <img src="src/components/assets/Solar/Solar2.jpg" alt="Energy Savings" className="w-1/2 md:w-1/3 p-2" />
-          <img src="src/components/assets/Solar/Solar3.jpg" alt="Maintenance Support" className="w-1/2 md:w-1/3 p-2" />
+          <img src={Solar1} alt="Solar Installation" className="w-1/2 md:w-1/3 p-2" />
+          <img src={Solar2} alt="Energy Savings" className="w-1/2 md:w-1/3 p-2" />
+          <img src={Solar3} alt="Maintenance Support" className="w-1/2 md:w-1/3 p-2" />
         </div>
         <div className="mt-4">
-          <video width="100%" 
-              autoPlay
-              muted 
-              loop >
-            <source src="src/components/assets/Solar/Solar5.mp4" type="video/mp4" />
+          <video width="100%" autoPlay muted loop>
+            <source src={SolarVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
