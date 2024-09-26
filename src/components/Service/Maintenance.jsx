@@ -10,10 +10,10 @@ const Maintenance = () => {
   };
 
   const images = [
-    { src: '/assets/M1.png', alt: 'JP', content: 'Hi Code is working' },
-    { src: '/assets/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if I wrote more content what will happen to hover' },
-    { src: '/assets/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
-    { src: '/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/components/assets/M1.png', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/components/assets/M2.jpg', alt: 'JP', content: 'Kinda Not working and what if I wrote more content what will happen to hover' },
+    { src: 'src/components/assets/M3.jpg', alt: 'JP', content: 'Hi Code is working' },
+    { src: 'src/components/assets/demo.jpg', alt: 'JP', content: 'Hi Code is working' },
   ];
 
   return (

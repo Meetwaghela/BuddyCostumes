@@ -11,10 +11,10 @@ const Wiring = () => {
   };
 
   const images = [
-    { src: '/assets/Wirimg.jpeg', alt: 'Image 1', content: 'Hi Code is working', type: 'image' },
-    { src: '/assets/Wirimg (2).jpeg', alt: 'Image 2', content: 'Kinda Not working and what if I wrote more content what will happen on hover', type: 'image' },
-    { src: '/assets/Wirimg (3).jpeg', alt: 'Image 3', content: 'Hi Code is working', type: 'image' },
-    { src: '/assets/Wirimg (1).mp4', alt: 'Video 1', content: 'Hi Code is working', type: 'video' },
+    { src: 'src/components/assets/Wirimg.jpeg', alt: 'Image 1', content: 'Hi Code is working', type: 'image' },
+    { src: 'src/components/assets/Wirimg (2).jpeg', alt: 'Image 2', content: 'Kinda Not working and what if I wrote more content what will happen on hover', type: 'image' },
+    { src: 'src/components/assets/Wirimg (3).jpeg', alt: 'Image 3', content: 'Hi Code is working', type: 'image' },
+    { src: 'src/components/assets/Wirimg (1).mp4', alt: 'Video 1', content: 'Hi Code is working', type: 'video' },
   ];
 
   return (

@@ -35,22 +35,22 @@ const SlideFromAbove = {
 };
 
 const clients = [
-  { name: 'Torrent Power Limited', logo: '/assets/torrent power.png', review: 'Exceptional service and professionalism. They have consistently delivered high-quality solutions for our projects.' },
-  { name: 'Shri Khemisati Processors', logo: '/assets/Shri Khemisati.jpg', review: 'Great experience, highly recommended! Their team goes above and beyond to meet our expectations.' },
-  { name: 'AFCONS Infrastructure Limited', logo: '/assets/Afcon.png', review: 'They deliver on time and with precision. Their electrical solutions have been vital for our infrastructure projects.' },
-  { name: 'Ronak Dyeing Limited', logo: '/assets/demo.jpg', review: 'Reliable and efficient services that we trust for all our manufacturing needs.' },
-  { name: 'Antariksh Infrabuild LLP.', logo: '/assets/Antariksh.jpg', review: 'Excellent quality and customer service. Their team truly understands our needs and delivers accordingly.' },
-  { name: 'Maru Enterprises pvt. ltd.', logo: '/assets/Maru.jpg', review: 'Professional and timely solutions with a deep focus on customer satisfaction.' },
-  { name: 'Chur Textiles Limited', logo: '/assets/Chur.png', review: 'Top-notch electrical solutions with a focus on safety and reliability.' },
-  { name: 'Jakharia Synthetics pvt ltd', logo: '/assets/jakharia.png', review: 'Highly satisfied with the service. Their solutions have streamlined our operations significantly.' },
-  { name: 'Harit Industries pvt ltd', logo: '/assets/Harit.jpg', review: 'A trustworthy partner for our projects, providing quality services time and again.' },
-  { name: 'Balaji Polyester pvt. ltd', logo: '/assets/Balaji.PNG', review: 'High standards and great support in all their electrical installations.' },
-  { name: 'Global Reality Infra', logo: '/assets/Global.png', review: 'Innovative and reliable services that have helped our business grow.' },
-  { name: 'DHL Supply Chain ind. pvt. ltd.', logo: '/assets/DHL.avif', review: 'Outstanding customer experience with a focus on quality and timeliness.' },
-  { name: 'S K Logistics', logo: '/assets/SK.jfif', review: 'Great attention to detail and professionalism, ensuring our operations run smoothly.' },
-  { name: 'Hemant Surgicals Industries Ltd.', logo: '/assets/Hemant.jpg-org', review: 'Exceptional quality and service. Their attention to detail is remarkable.' },
-  { name: 'Chacha Lifestyle pvt. ltd.', logo: '/assets/Chacha.PNG', review: 'Reliable and efficient solutions that have always exceeded our expectations.' },
-  { name: 'New Empire Textiles processors Pvt. Ltd', logo: '/assets/Empire.jpg', review: 'First-class service from a team that really cares about customer satisfaction.' },
+  { name: 'Torrent Power Limited', logo: 'src/components/assets/torrent power.png', review: 'Exceptional service and professionalism. They have consistently delivered high-quality solutions for our projects.' },
+  { name: 'Shri Khemisati Processors', logo: 'src/components/assets/Shri Khemisati.jpg', review: 'Great experience, highly recommended! Their team goes above and beyond to meet our expectations.' },
+  { name: 'AFCONS Infrastructure Limited', logo: 'src/components/assets/Afcon.png', review: 'They deliver on time and with precision. Their electrical solutions have been vital for our infrastructure projects.' },
+  { name: 'Ronak Dyeing Limited', logo: 'src/components/assets/demo.jpg', review: 'Reliable and efficient services that we trust for all our manufacturing needs.' },
+  { name: 'Antariksh Infrabuild LLP.', logo: 'src/components/assets/Antariksh.jpg', review: 'Excellent quality and customer service. Their team truly understands our needs and delivers accordingly.' },
+  { name: 'Maru Enterprises pvt. ltd.', logo: 'src/components/assets/Maru.jpg', review: 'Professional and timely solutions with a deep focus on customer satisfaction.' },
+  { name: 'Chur Textiles Limited', logo: 'src/components/assets/Chur.png', review: 'Top-notch electrical solutions with a focus on safety and reliability.' },
+  { name: 'Jakharia Synthetics pvt ltd', logo: 'src/components/assets/jakharia.png', review: 'Highly satisfied with the service. Their solutions have streamlined our operations significantly.' },
+  { name: 'Harit Industries pvt ltd', logo: 'src/components/assets/Harit.jpg', review: 'A trustworthy partner for our projects, providing quality services time and again.' },
+  { name: 'Balaji Polyester pvt. ltd', logo: 'src/components/assets/Balaji.PNG', review: 'High standards and great support in all their electrical installations.' },
+  { name: 'Global Reality Infra', logo: 'src/components/assets/Global.png', review: 'Innovative and reliable services that have helped our business grow.' },
+  { name: 'DHL Supply Chain ind. pvt. ltd.', logo: 'src/components/assets/DHL.avif', review: 'Outstanding customer experience with a focus on quality and timeliness.' },
+  { name: 'S K Logistics', logo: 'src/components/assets/SK.jfif', review: 'Great attention to detail and professionalism, ensuring our operations run smoothly.' },
+  { name: 'Hemant Surgicals Industries Ltd.', logo: 'src/components/assets/Hemant.jpg-org', review: 'Exceptional quality and service. Their attention to detail is remarkable.' },
+  { name: 'Chacha Lifestyle pvt. ltd.', logo: 'src/components/assets/Chacha.PNG', review: 'Reliable and efficient solutions that have always exceeded our expectations.' },
+  { name: 'New Empire Textiles processors Pvt. Ltd', logo: 'src/components/assets/Empire.jpg', review: 'First-class service from a team that really cares about customer satisfaction.' },
 ];
 
 const Clients = () => {

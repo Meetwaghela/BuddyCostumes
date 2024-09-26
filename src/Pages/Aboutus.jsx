@@ -72,7 +72,7 @@ const Aboutus = () => {
                 <h2 className='text-3xl text-center '><b>Meet Our Team</b></h2>
                 <div className="dark:bg-gray-700 dark:text-white team-container">
                     <div className="dark:bg-gray-600 dark:text-white team-member">
-                        <img src="/assets/JP.jpg" alt="JP" className="team-image" />
+                        <img src="src/components/assets/JP.jpg" alt="JP" className="team-image" />
                         <div className="dark:bg-gray-600 dark:text-white team-info">
                             <h3>Jayesh Patel</h3>
                             <p className='dark:text-white'>Project Manager</p>

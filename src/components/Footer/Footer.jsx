@@ -7,7 +7,7 @@ import {
   FaMobileAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import JP from "/assets/JP.jpg";
+import JP from "../../components/assets/JP.jpg";
 
 const Footer = () => {
   return (
