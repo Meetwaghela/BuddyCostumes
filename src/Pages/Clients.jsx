@@ -1,23 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Import client logos
-import TorrentPowerLogo from "../../components/assets/torrent power.png";
-import KhemisatiLogo from "../../components/assets/Shri Khemisati.jpg";
-import AfconsLogo from "../../components/assets/Afcon.png";
-import RonakLogo from "../../components/assets/demo.jpg";
-import AntarikshLogo from "../../components/assets/Antariksh.jpg";
-import MaruLogo from "../../components/assets/Maru.jpg";
-import ChurLogo from "../../components/assets/Chur.png";
-import JakhariaLogo from "../../components/assets/jakharia.png";
-import HaritLogo from "../../components/assets/Harit.jpg";
-import BalajiLogo from "../../components/assets/Balaji.PNG";
-import GlobalRealityLogo from "../../components/assets/Global.png";
-import DHLLogo from "../../components/assets/DHL.avif";
-import SKLogo from "../../components/assets/SK.jfif";
-import HemantLogo from "../../components/assets/Hemant.jpg-org";
-import ChachaLogo from "../../components/assets/Chacha.PNG";
-import EmpireLogo from "../../components/assets/Empire.jpg";
+import torrentPowerLogo from "../components/assets/Clients Logo/torrent power.png";
+import khemisatiLogo from "../components/assets/Clients Logo/Shri Khemisati.jpg";
+import afconsLogo from "../components/assets/Clients Logo/Afcon.png";
+import ronakDyeingLogo from "../components/assets/Clients Logo/demo.jpg";
+import antarikshLogo from "../components/assets/Clients Logo/Antariksh.jpg";
+import maruLogo from "../components/assets/Clients Logo/Maru.jpg";
+import churLogo from "../components/assets/Clients Logo/Chur.png";
+import jakhariaLogo from "../components/assets/Clients Logo/jakharia.png";
+import haritLogo from "../components/assets/Clients Logo/Harit.jpg";
+import balajiLogo from "../components/assets/Clients Logo/Balaji.png";
+import globalRealityLogo from "../components/assets/Clients Logo/Global.png";
+import dhlLogo from "../components/assets/Clients Logo/DHL.avif";
+import skLogo from "../components/assets/Clients Logo/SK.jfif";
+import hemantLogo from "../components/assets/Clients Logo/Hemant.jpg";
+import chachaLogo from "../components/assets/Clients Logo/Chacha.png";
+import empireLogo from "../components/assets/Clients Logo/Empire.jpg";
+
 
 const SlideLeft = (delay) => {
   return {
@@ -53,22 +53,22 @@ const SlideFromAbove = {
 };
 
 const clients = [
-  { name: "Torrent Power Limited", logo: TorrentPowerLogo, review: "Exceptional service and professionalism. They have consistently delivered high-quality solutions for our projects." },
-  { name: "Shri Khemisati Processors", logo: KhemisatiLogo, review: "Great experience, highly recommended! Their team goes above and beyond to meet our expectations." },
-  { name: "AFCONS Infrastructure Limited", logo: AfconsLogo, review: "They deliver on time and with precision. Their electrical solutions have been vital for our infrastructure projects." },
-  { name: "Ronak Dyeing Limited", logo: RonakLogo, review: "Reliable and efficient services that we trust for all our manufacturing needs." },
-  { name: "Antariksh Infrabuild LLP.", logo: AntarikshLogo, review: "Excellent quality and customer service. Their team truly understands our needs and delivers accordingly." },
-  { name: "Maru Enterprises Pvt. Ltd.", logo: MaruLogo, review: "Professional and timely solutions with a deep focus on customer satisfaction." },
-  { name: "Chur Textiles Limited", logo: ChurLogo, review: "Top-notch electrical solutions with a focus on safety and reliability." },
-  { name: "Jakharia Synthetics Pvt. Ltd.", logo: JakhariaLogo, review: "Highly satisfied with the service. Their solutions have streamlined our operations significantly." },
-  { name: "Harit Industries Pvt. Ltd.", logo: HaritLogo, review: "A trustworthy partner for our projects, providing quality services time and again." },
-  { name: "Balaji Polyester Pvt. Ltd", logo: BalajiLogo, review: "High standards and great support in all their electrical installations." },
-  { name: "Global Reality Infra", logo: GlobalRealityLogo, review: "Innovative and reliable services that have helped our business grow." },
-  { name: "DHL Supply Chain Ind. Pvt. Ltd.", logo: DHLLogo, review: "Outstanding customer experience with a focus on quality and timeliness." },
-  { name: "S K Logistics", logo: SKLogo, review: "Great attention to detail and professionalism, ensuring our operations run smoothly." },
-  { name: "Hemant Surgicals Industries Ltd.", logo: HemantLogo, review: "Exceptional quality and service. Their attention to detail is remarkable." },
-  { name: "Chacha Lifestyle Pvt. Ltd.", logo: ChachaLogo, review: "Reliable and efficient solutions that have always exceeded our expectations." },
-  { name: "New Empire Textiles Processors Pvt. Ltd", logo: EmpireLogo, review: "First-class service from a team that really cares about customer satisfaction." },
+  { name: "Torrent Power Limited", logo: torrentPowerLogo, review: "Exceptional service and professionalism. They have consistently delivered high-quality solutions for our projects." },
+  { name: "Shri Khemisati Processors", logo: khemisatiLogo, review: "Great experience, highly recommended! Their team goes above and beyond to meet our expectations." },
+  { name: "AFCONS Infrastructure Limited", logo: afconsLogo, review: "They deliver on time and with precision. Their electrical solutions have been vital for our infrastructure projects." },
+  { name: "Ronak Dyeing Limited", logo: ronakDyeingLogo, review: "Reliable and efficient services that we trust for all our manufacturing needs." },
+  { name: "Antariksh Infrabuild LLP.", logo: antarikshLogo, review: "Excellent quality and customer service. Their team truly understands our needs and delivers accordingly." },
+  { name: "Maru Enterprises pvt. ltd.", logo: maruLogo, review: "Professional and timely solutions with a deep focus on customer satisfaction." },
+  { name: "Chur Textiles Limited", logo: churLogo, review: "Top-notch electrical solutions with a focus on safety and reliability." },
+  { name: "Jakharia Synthetics pvt ltd", logo: jakhariaLogo, review: "Highly satisfied with the service. Their solutions have streamlined our operations significantly." },
+  { name: "Harit Industries pvt ltd", logo: haritLogo, review: "A trustworthy partner for our projects, providing quality services time and again." },
+  { name: "Balaji Polyester pvt. ltd", logo: balajiLogo, review: "High standards and great support in all their electrical installations." },
+  { name: "Global Reality Infra", logo: globalRealityLogo, review: "Innovative and reliable services that have helped our business grow." },
+  { name: "DHL Supply Chain ind. pvt. ltd.", logo: dhlLogo, review: "Outstanding customer experience with a focus on quality and timeliness." },
+  { name: "S K Logistics", logo: skLogo, review: "Great attention to detail and professionalism, ensuring our operations run smoothly." },
+  { name: "Hemant Surgicals Industries Ltd.", logo: hemantLogo, review: "Exceptional quality and service. Their attention to detail is remarkable." },
+  { name: "Chacha Lifestyle pvt. ltd.", logo: chachaLogo, review: "Reliable and efficient solutions that have always exceeded our expectations." },
+  { name: "New Empire Textiles processors Pvt. Ltd", logo: empireLogo, review: "First-class service from a team that really cares about customer satisfaction." },
 ];
 
 const Clients = () => {
