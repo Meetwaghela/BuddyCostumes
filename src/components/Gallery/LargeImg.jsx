@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './Gallery.css';
+import closeButtonImg from '../assets/x-button.png';
 
 const LargeImg = (props) => {
     const { closeButton, src, title, details, showPrevImage, showNextImage } = props;
@@ -21,7 +22,7 @@ const LargeImg = (props) => {
                 >
                     <img 
                         className="close-icon" 
-                        src="src/assets/x-button.png" 
+                        src={closeButtonImg} 
                         alt="Close" 
                     />
                 </button>
