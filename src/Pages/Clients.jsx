@@ -73,7 +73,7 @@ const Clients = () => {
             animate="animate"
             className="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center dark:bg-gray-700"
           >
-            <div className="w-24 h-24 mb-4 p-2 bg-white rounded-full flex items-center justify-center dark:bg-gray-800">
+            <div className="w-24 h-24 mb-4 p-2 bg-white rounded-full flex items-center justify-center">
               <img
                 src={client.logo}
                 alt={client.name}
