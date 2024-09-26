@@ -62,9 +62,7 @@ const Electricalins = () => {
               {image.content}
             </div>
             {clickedIndex !== index && (
-              <div className={`click-to-know-more text-white ${activeIndex === index ? "visible" : ""}`}>
-                Click to know more about image or video
-              </div>
+              <div className="click-to-know-more">Click to know more!</div>
             )}
           </div>
         ))}

@@ -19,6 +19,7 @@ body {
 
 .dark body {
   background-color: var(--bg-color-dark);
+  color: var(--text-color-dark); 
 }
 
 .image-container {
@@ -119,7 +120,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1rem;
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
   text-align: center;
   opacity: 0;
   transition: opacity 0.5s;
@@ -137,6 +138,7 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
   }
 }
 
