@@ -187,7 +187,7 @@ const ContactUs = () => {
           <div className="contact-form flex flex-col items-center gap-4 text-center dark:bg-gray-800 dark:text-white text-black md:w-1/2">
             <h1 className="text-3xl text-center font-semibold dark:bg-gray-800 dark:text-white">Let's discuss your electrical needs</h1>
             <form ref={form} onSubmit={sendEmail}>
-              <input type="text" name="name" placeholder="Insert your name" className="dark:text-white dark:bg-gray-800" required aria-label="Name" />
+            <input type="text" name="name" placeholder="Insert your name" className="dark:text-white dark:bg-gray-800" required aria-label="Name"  onInput={(e) => {e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');}}/>
               <input type="tel" name="mobile" placeholder="Insert your mobile number" className="dark:text-white dark:bg-gray-800" required aria-label="Mobile Number" />
               <input type="email" name="email_id" placeholder="Insert your email" className="dark:text-white dark:bg-gray-800" required aria-label="Email" />
               <textarea name="query" placeholder="Write your Query" className="dark:text-white dark:bg-gray-800" required aria-label="Query"></textarea>
