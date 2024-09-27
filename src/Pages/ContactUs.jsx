@@ -4,6 +4,7 @@ import { GiLetterBomb } from "react-icons/gi";
 import { motion } from "framer-motion";
 import { BiPhoneCall } from "react-icons/bi";
 import { FaRegMessage } from "react-icons/fa6";
+import emailjs from "emailjs-com";
 import './Contactus.css';
 
 const contactData = [
@@ -74,38 +75,64 @@ const contactData = [
 ];
 
 const slideInFromLeft = (delay) => ({
-  initial: {
-    opacity: 0,
-    x: 50,
-  },
+  initial: { opacity: 0, x: 50 },
   animate: {
     opacity: 1,
     x: 0,
-    transition: {
-      duration: 0.2,
-      delay: delay,
-      ease: "easeInOut",
-    },
+    transition: { duration: 0.2, delay, ease: "easeInOut" },
   },
 });
 
 const ContactUs = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const form = useRef(null);
 
-  const sendEmail = (event) => {
+  const validateMobile = (mobile) => /^\d{10}$/.test(mobile);
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const sendEmail = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
+    setMessage("");
+    setError("");
+
+    const mobileInput = form.current.mobile.value;
+    const emailInput = form.current.email_id.value;
+
+    if (!validateMobile(mobileInput)) {
+      setError("Please enter a valid 10-digit mobile number.");
       setIsLoading(false);
+      return;
+    }
+
+    if (!validateEmail(emailInput)) {
+      setError("Please enter a valid email address.");
+      setIsLoading(false);
+      return;
+    }
+
+    const templateParams = {
+      from_name: form.current.name.value,
+      mobile: mobileInput,
+      email_id: emailInput,
+      query: form.current.query.value,
+    };
+
+    try {
+      await emailjs.send("service_nelo94f", "template_p57zqw8", templateParams, "5u5Q70D5LE_2vYbHT");
       setMessage("Your message has been sent!");
+    } catch (error) {
+      setError("There was an error sending your message. Please try again.");
+    } finally {
+      setIsLoading(false);
       form.current.reset();
-    }, 2000);
+    }
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -130,12 +157,8 @@ const ContactUs = () => {
               aria-label={contact.title}
             >
               <div className="text-4xl mb-4">{contact.icon}</div>
-              <h2 className="text-lg font-semibold text-center mb-2">
-                {contact.title}
-              </h2>
-              {contact.text && (
-                <p className="text-center text-base">{contact.text}</p>
-              )}
+              <h2 className="text-lg font-semibold text-center mb-2">{contact.title}</h2>
+              {contact.text && <p className="text-center text-base">{contact.text}</p>}
             </motion.a>
           ))}
         </div>
@@ -154,66 +177,58 @@ const ContactUs = () => {
               aria-label={contact.title}
             >
               <div className="text-4xl mb-4">{contact.icon}</div>
-              <h2 className="text-lg font-semibold text-center mb-2">
-                {contact.title}
-              </h2>
-              {contact.text && (
-                <p className="text-center text-base">{contact.text}</p>
-              )}
+              <h2 className="text-lg font-semibold text-center mb-2">{contact.title}</h2>
+              {contact.text && <p className="text-center text-base">{contact.text}</p>}
             </motion.a>
           ))}
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 rounded-2xl p-2 dark:text-white dark:bg-gray-800">
-          <div 
-            data-aos="fade-right"
-            data-aos-duration="400"
-            data-aos-once="true"
-            className="contact-form flex flex-col items-center gap-4 text-center dark:bg-gray-800 dark:text-white text-black md:w-1/2"
-          >
-            <h1 className=" text-3xl text-center font-semibold dark:bg-gray-800 dark:text-white">Let's discuss your electrical needs</h1>
+          <div className="contact-form flex flex-col items-center gap-4 text-center dark:bg-gray-800 dark:text-white text-black md:w-1/2">
+            <h1 className="text-3xl text-center font-semibold dark:bg-gray-800 dark:text-white">Let's discuss your electrical needs</h1>
             <form ref={form} onSubmit={sendEmail}>
-              <input type="text" name="name" placeholder="Insert your name" className="dark:text-white dark:bg-gray-800" required />
-              <input type="email" name="email" placeholder="Insert your email" className="dark:text-white dark:bg-gray-800" required />
-              <textarea name="project" placeholder="Write your Query" className="dark:text-white dark:bg-gray-800" required></textarea>
+              <input type="text" name="name" placeholder="Insert your name" className="dark:text-white dark:bg-gray-800" required aria-label="Name" />
+              <input type="tel" name="mobile" placeholder="Insert your mobile number" className="dark:text-white dark:bg-gray-800" required aria-label="Mobile Number" />
+              <input type="email" name="email_id" placeholder="Insert your email" className="dark:text-white dark:bg-gray-800" required aria-label="Email" />
+              <textarea name="query" placeholder="Write your Query" className="dark:text-white dark:bg-gray-800" required aria-label="Query"></textarea>
               <button type="submit" className="rounded-xl dark:text-white dark:bg-blue-700" disabled={isLoading}>
                 {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-            {message && <p className="text-center text-green-500 mt-4">{message}</p>}
+            {message && <p role="alert" className="text-center text-green-500 mt-4">{message}</p>}
+            {error && <p role="alert" className="text-center text-red-500 mt-4">{error}</p>}
           </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="400"
-            data-aos-once="true"
-            className="flex flex-col items-center justify-top mt-10 md:w-1/2"
-          >
+          <div className="flex flex-col items-center justify-top mt-10 md:w-1/2">
             <h1 className="text-3xl text-center font-semibold dark:text-white mb-10">Operational work hours</h1>
             <div className="flex flex-col w-full space-y-2">
               <div className="px-10 flex text-center justify-between w-[85%] Bottom-dashed pb-2">
                 <h2 className="text-xl">Mon - Sat</h2>
                 <p className="text-right">: 9:00AM - 8:00PM</p>
               </div>
-              <div className="px-10 flex justify-between w-[85%] pb-2">
+              <div className="px-10 flex justify-between w-[85%] Bottom-dashed pb-2">
                 <h2 className="text-xl">Sunday</h2>
                 <p className="text-right">: 10:00AM - 3:00PM</p>
+              </div>
+              <div className="px-10 flex justify-between w-[85%] pb-2">
+                <h2 className="text-xl">Public Holidays</h2>
+                <p className="text-right">: Closed</p>
               </div>
             </div>
           </div>
         </div>
         <div className="mapouter">
-        <div className="map-section" style={{ marginBottom: '20px' }}>
-          <h2 className="text-4xl font-bold text-left pb-4 dark:text-white">Location to Visit</h2>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d941.5201795244598!2d73.0460645!3d19.2788557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bdac1a4100dd%3A0x62ffca687d2ae92a!2sKRISHANA%20ELECTRICALS!5e0!3m2!1sen!2sin!4v1723797929825!5m2!1sen!2sin" 
-            width="100%" 
-            height="400"
-            style={{ borderRadius: '8px', border: 'none' }} 
-            allowFullScreen 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+          <div className="map-section" style={{ marginBottom: '20px' }}>
+            <h2 className="text-4xl font-bold text-left pb-4 dark:text-white">Location to Visit</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d941.5201795244598!2d73.0460645!3d19.2788557!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bdac1a4100dd%3A0x62ffca687d2ae92a!2sKRISHANA%20ELECTRICALS!5e0!3m2!1sen!2sin!4v1723797929825!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ borderRadius: '8px', border: 'none' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>

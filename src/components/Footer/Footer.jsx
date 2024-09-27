@@ -125,7 +125,7 @@ const Footer = () => {
                     Go
                   </button>
                 </form>
-                <div className="flex items-center gap-3 mt-4"> {/* Increased margin-top for spacing */}
+                <div className="flex items-center gap-3 mt-4">
                   <a
                     href="https://wa.me/+919970751651"
                     aria-label="WhatsApp"
