@@ -121,7 +121,7 @@ const ContactUs = () => {
     };
 
     try {
-      await emailjs.send("service_nelo94f", "template_p57zqw8", templateParams, "5u5Q70D5LE_2vYbHT");
+      await emailjs.send("service_nelo94f", "template_p57zqw8", templateParams, "npyXi2SMsFqSvSYvu");
       setMessage("Your message has been sent!");
     } catch (error) {
       setError("There was an error sending your message. Please try again.");
