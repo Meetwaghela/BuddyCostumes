@@ -115,7 +115,7 @@ const Processes = () => {
             </div>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center mb-10">
             <video 
               autoPlay 
               muted 
