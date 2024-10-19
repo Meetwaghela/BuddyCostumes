@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaWhatsapp, FaSms, FaPhoneAlt } from 'react-icons/fa';
+import RC from "../components/assets/RC.png";
 
 const Consultancy = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,28 +47,18 @@ const Consultancy = () => {
       delay: 0.6,
     },
   ];
-
-  const handleImageClick = (src) => {
-    setImageSrc(src);
+  const handleImageClick = () => {
+    setImageSrc(RC);
     setIsOpen(true);
   };
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
+  const handleClose = () => setIsOpen(false);
   const handleBackgroundClick = (e) => {
     if (e.target === e.currentTarget) {
       handleClose();
     }
   };
-
-  const handleTouchEnd = (e) => {
-    handleClose();
-  };
-
   return (
-    <div className="container mx-auto p-6 ">
+    <div className="container mx-auto p-6">
       <motion.div
         className="flex flex-col md:flex-row items-center justify-center py-20"
         initial={{ opacity: 0, y: -50 }}
@@ -75,13 +66,13 @@ const Consultancy = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.img
-          src="src/assets/JP.jpg" 
-          alt="no image"
+          src={RC}
+          alt="Consultant Raju Choubey" 
           className="w-32 h-32 rounded-full mb-6 md:mb-0 md:mr-6 cursor-pointer"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          onClick={() => handleImageClick("src/assets/JP.jpg")} 
+          onClick={handleImageClick}
         />
         <motion.h1
           className="text-4xl font-bold text-center dark:text-white"
@@ -99,25 +90,20 @@ const Consultancy = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        Offering consultancy for all electrical solutions, installation,
-        maintenance, and specializing in securing State & Central Textile Subsidy.
+        Offering consultancy for all electrical solutions, installation, maintenance, and specializing in securing State & Central Textile Subsidy.
       </motion.p>
 
       <motion.div
-        className="bg-blue-100 p-6 rounded-lg shadow-lg mb-8 "
+        className="bg-blue-100 p-6 rounded-lg shadow-lg mb-8"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <h2 className="text-2xl font-bold text-center text-blue-800 mb-4 ">
+        <h2 className="text-2xl font-bold text-center text-blue-800 mb-4">
           State & Central Textile Subsidy
         </h2>
-        <p className="text-md text-blue-700 ">
-          We assist businesses in navigating and securing textile subsidies from
-          both state and central governments. These subsidies are essential for
-          the growth and development of textile industries, offering financial
-          support for new projects, modernization, and expansion. Let us help
-          you maximize your benefits and streamline the application process.
+        <p className="text-md text-blue-700">
+          We assist businesses in navigating and securing textile subsidies from both state and central governments. These subsidies are essential for the growth and development of textile industries, offering financial support for new projects, modernization, and expansion. Let us help you maximize your benefits and streamline the application process.
         </p>
       </motion.div>
 
@@ -149,6 +135,7 @@ const Consultancy = () => {
                     key={index}
                     href={contact.link}
                     className="block text-blue-600 underline hover:text-blue-800"
+                    aria-label={`Contact through ${info.title} at ${contact.text}`}
                   >
                     {contact.text}
                   </a>
@@ -157,6 +144,7 @@ const Consultancy = () => {
                 <a
                   href={info.link}
                   className="text-blue-600 underline hover:text-blue-800"
+                  aria-label={`Contact through ${info.title} at ${info.text}`}
                 >
                   {info.text}
                 </a>
@@ -169,8 +157,7 @@ const Consultancy = () => {
       {isOpen && (
         <div
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-          onClick={handleBackgroundClick} 
-          onTouchEnd={handleTouchEnd}
+          onClick={handleBackgroundClick}
         >
           <motion.img
             src={imageSrc}
@@ -186,5 +173,4 @@ const Consultancy = () => {
     </div>
   );
 };
-
 export default Consultancy;
