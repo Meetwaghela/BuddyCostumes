@@ -1,8 +1,8 @@
 import React from "react";
 import { FaFileContract, FaHandshake, FaLightbulb, FaShieldAlt } from "react-icons/fa";
 import "./Aboutus.css";
-import JP from "../components/assets/JP.png";
-import RC from "../components/assets/RC.png";
+import JP from "../components/assets/JP.jpeg";
+import RC from "../components/assets/RC.jpg";
 import Chandu from "../components/assets/demo.jpg";
 import Haresh from "../components/assets/demo.jpg";
 

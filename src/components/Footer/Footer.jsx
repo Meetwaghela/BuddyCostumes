@@ -2,12 +2,12 @@ import React from "react";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
+  // FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
   FaWhatsapp,
 } from "react-icons/fa";
-import JP from "../../components/assets/JP.png";
+import JP from "../../components/assets/JP.jpeg";
 
 const Footer = () => {
   return (

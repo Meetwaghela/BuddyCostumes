@@ -18,12 +18,10 @@ import Ins14 from "../../components/assets/Ins14.jpg";
 const Electricalins = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [clickedIndex, setClickedIndex] = useState(null);
-
   const handleClick = (index) => {
     setActiveIndex(index);
     setClickedIndex(index === clickedIndex ? null : index); 
   };
-
   const images = [
     { src: Ins1, alt: "Outdoor Substation", content: "Installation and operation of an Outdoor Substation - managing electrical distribution for large-scale facilities." },
     { src: Ins2, alt: "Outdoor Substation Maintenance", content: "Technicians working on maintaining a high-voltage Outdoor Substation to ensure continuous electrical supply." },
@@ -40,7 +38,6 @@ const Electricalins = () => {
     { src: Ins13, alt: "Cable Laying", content: "Laying high-voltage underground cables for power transmission in industrial and urban areas." },
     { src: Ins14, alt: "Cable Termination", content: "Performing precise cable terminations to ensure secure electrical connections and reduce energy losses." },
   ];
-
   return (
     <div>
       <div className="text-3xl font-bold text-center py-20 mb-20 dark:text-white">
@@ -70,5 +67,4 @@ const Electricalins = () => {
     </div>
   );
 };
-
 export default Electricalins;

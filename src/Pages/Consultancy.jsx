@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaWhatsapp, FaSms, FaPhoneAlt } from 'react-icons/fa';
-import RC from "../components/assets/RC.png";
+import RC from "../components/assets/RC.jpg";
 
 const Consultancy = () => {
   const [isOpen, setIsOpen] = useState(false);
