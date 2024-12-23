@@ -7,7 +7,7 @@ import M3 from '../../components/assets/M3.jpg';
 const Maintenance = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [clickedIndex, setClickedIndex] = useState(null); 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useState(null);
 
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -34,7 +34,7 @@ const Maintenance = () => {
 
   return (
     <div>
-      <div className='text-3xl font-bold text-center py-20 mb-20 dark:bg-gray-900 dark:text-white'>
+      <div className='text-3xl font-bold text-center py-20 mb-2 dark:bg-gray-900 dark:text-white'>
         <h1>ELECTRICAL MAINTENANCE</h1>
         <p className='text-xl italic font-semibold justify-center text-center'>
           Electrical maintenance involves the routine inspection, testing, and repair of electrical systems to ensure their safe and efficient operation. 
