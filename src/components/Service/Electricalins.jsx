@@ -16,8 +16,9 @@ import Ins13 from "../../components/assets/Ins13.jpg";
 import Ins14 from "../../components/assets/Ins14.jpg";
 
 const Electricalins = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [clickedIndex, setClickedIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [clickedIndex, setClickedIndex] = useState(null); 
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const handleClick = (index) => {
     setActiveIndex(index);
     setClickedIndex(index === clickedIndex ? null : index); 

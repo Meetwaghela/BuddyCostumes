@@ -3,11 +3,11 @@ import './Electricalins.css';
 import M1 from '../../components/assets/M1.png';
 import M2 from '../../components/assets/M2.jpg';
 import M3 from '../../components/assets/M3.jpg';
-import demo from '../../components/assets/demo.jpg';
 
 const Maintenance = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [clickedIndex, setClickedIndex] = useState(null); 
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleClick = (index) => {
     setActiveIndex(index);

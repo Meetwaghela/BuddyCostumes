@@ -6,8 +6,9 @@ import Wirimg3 from '../../components/assets/Wirimg (3).jpeg';
 import WirimgVideo from '../../components/assets/Wirimg (1).mp4';
 
 const Wiring = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [clickedIndex, setClickedIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [clickedIndex, setClickedIndex] = useState(null); 
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
