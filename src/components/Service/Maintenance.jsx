@@ -30,11 +30,6 @@ const Maintenance = () => {
       alt: 'Preventive Maintenance', 
       content: 'Conducting routine preventive maintenance on transformers to identify wear and tear, ensuring longevity and operational efficiency.'
     },
-    { 
-      src: demo, 
-      alt: 'Overview of Maintenance Tasks', 
-      content: 'A comprehensive overview of various maintenance tasks performed on electrical systems, highlighting the importance of regular upkeep and inspections.'
-    },
   ];
 
   return (
