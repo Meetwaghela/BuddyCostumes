@@ -87,7 +87,7 @@ const Aboutus = lazy(() => import('./Pages/Aboutus'));
 const ContactUs = lazy(() => import('./Pages/ContactUs'));
 const Processes = lazy(() => import('./Pages/Processes'));
 const Privacypolicy = lazy(() => import('./Pages/Privacypolicy'))
-const Stonehandwork = lazy(() => import('./Pages/Stonehandwork'));
+
 const DanceStudio = lazy(() => import('./Pages/DanceStudio'));
 const Innovative = lazy(() => import('./components/Service/Innovative'));
 const Payment = lazy(() => import('./Pages/Payment'));
@@ -114,7 +114,7 @@ function App() {
           <Route path="/DanceStudio" element={<DanceStudio />} />
           <Route path="/Innovative" element={<Innovative />} />
           <Route path="/Payment" element={<Payment />} />
-          <Route path="/Stonehandwork" element={<Stonehandwork />} />
+          
           <Route path="/Fabric" element={<Fabric />} /> {/* Corrected - assuming the path should match the import alias */}
           <Route
             path="/"
