@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
+@layer utilities {
   .bg-navbar {
-    @apply bg-gradient-to-r from-pink-800 to-violet-950 dark:bg-gray-800;
-  } */
-
-  @layer utilities {
-    .bg-navbar {
-      @apply bg-gradient-to-r from-blue-700 via-violet-700 via-40% via-purple-700 to-red-700 dark:bg-gray-800;
-    }
-    
+    /* Updated gradient based on your new specification */
+    @apply bg-gradient-to-r from-blue-700 via-violet-700 via-40% via-purple-700 to-red-700 dark:bg-gray-800;
+  }
+  
   .btn-primary {
     @apply inline-block bg-primary text-white font-semibold rounded-lg hover:bg-secondary duration-200 hover:shadow-[0px_10px_8px_-7px_#cd5c5c] py-2 px-6;
   }

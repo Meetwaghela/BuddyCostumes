@@ -79,19 +79,21 @@ const Contactus = lazy(() => import('./components/Contactus/Contactus'));
 const Services = lazy(() => import('./components/Services/Services'));
 const Process = lazy(() => import('./components/Process/Process'));
 const Gallery = lazy(() => import('./components/Gallery/Gallery'));
-const Electricalins = lazy(() => import('./components/Service/Electricalins'));
-const Maintenance = lazy(() => import('./components/Service/Maintenance'));
-const Wiring = lazy(() => import('./components/Service/Wiring'));
+const Customdesign = lazy(() => import('./components/Service/Customdesign'));
+// const Maintenance = lazy(() => import('./components/Service/Maintenance'));
+const Accessories = lazy(() => import('./components/Service/Accessories'));
 const Service = lazy(() => import('./components/Services/Service'));
 const Aboutus = lazy(() => import('./Pages/Aboutus'));
 const ContactUs = lazy(() => import('./Pages/ContactUs'));
 const Processes = lazy(() => import('./Pages/Processes'));
-const Privacypolicy = lazy(() => import('./Pages/Privacypolicy'));
-const Clients = lazy(() => import('./Pages/Clients'));
-const Consultancy = lazy(() => import('./Pages/Consultancy'));
+const Privacypolicy = lazy(() => import('./Pages/Privacypolicy'))
+const Stonehandwork = lazy(() => import('./Pages/Stonehandwork'));
+const DanceStudio = lazy(() => import('./Pages/DanceStudio'));
 const Innovative = lazy(() => import('./components/Service/Innovative'));
 const Payment = lazy(() => import('./Pages/Payment'));
-const Solutions = lazy(() => import('./components/Service/Solutions'));
+const Fabric = lazy(() => import('./components/Service/Fabric'));
+const Stonework = lazy(() => import('./components/Service/Stonework'));
+
 
 function App() {
   return (
@@ -99,20 +101,21 @@ function App() {
       <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/Aboutus" element={<Aboutus />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Gallery" element={<Gallery />} />
-          <Route path="/Electricalins" element={<Electricalins />} />
-          <Route path="/Wiring" element={<Wiring />} />
-          <Route path="/Maintenance" element={<Maintenance />} />
+          <Route path="/Customdesign" element={<Customdesign />} /> {/* Corrected */}
+          <Route path="/Accessories" element={<Accessories />} /> {/* Corrected */}
+          {/* <Route path="/Maintenance" element={<Maintenance />} /> */}
           <Route path="/Processes" element={<Processes />} />
           <Route path="/Service" element={<Service />} />
           <Route path="/Privacy" element={<Privacypolicy />} />
-          <Route path="/Clients" element={<Clients />} />
-          <Route path="/Consultancy" element={<Consultancy />} />
+          <Route path="/Stonework" element={<Stonework />} />
+          <Route path="/DanceStudio" element={<DanceStudio />} />
           <Route path="/Innovative" element={<Innovative />} />
           <Route path="/Payment" element={<Payment />} />
-          <Route path="/Solutions" element={<Solutions />} />
+          <Route path="/Stonehandwork" element={<Stonehandwork />} />
+          <Route path="/Fabric" element={<Fabric />} /> {/* Corrected - assuming the path should match the import alias */}
           <Route
             path="/"
             element={

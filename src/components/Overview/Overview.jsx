@@ -8,7 +8,7 @@ const Overview = () => {
  
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-lg font-bold text-black/80 dark:text-white sm:text-xl md:text-3xl">
-                        <CountUp end={500} suffix="+" duration={2.75} />
+                        <CountUp end={2000} suffix="+" duration={2.75} />
                     </h1>
                     <p className="sm:text-md text-xs md:text-lg">Satisfied Clients</p>
                 </div>
@@ -29,7 +29,7 @@ const Overview = () => {
 
                 <div className="flex flex-col items-center justify-center">
                     <h1 className="text-lg font-bold text-black/80 dark:text-white sm:text-xl md:text-3xl">
-                        <CountUp end={1000} suffix="+" duration={2.75} />
+                        <CountUp end={5000} suffix="+" duration={2.75} />
                     </h1>
                     <p className="sm:text-md text-xs md:text-lg">Worked Projects</p>
                 </div>

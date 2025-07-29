@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import img5 from "../../components/assets/5.webp";
+import img5 from "../../components/assets/5.jpg";
 import ProgressBar from './ProgressBar';
 
 const slideAnimation = (direction, delay) => {
@@ -45,17 +45,17 @@ const BannerDetails = ({ reverse }) => {
             className={`flex flex-col items-center gap-4 text-center md:items-start md:text-left ${reverse ? "md:order-last" : ""}`}
           >
             <h1 className="text-2xl md:text-4xl font-bold dark:text-white overflow-hidden">
-              Your Trusted Electrical Contracting Partner
+            Your Creative & Reliable Costume Partner
             </h1>
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              Delivering quality electrical solutions for all your needs.
+            Delivering high-quality costumes with reliable and friendly service
             </p>
             <div className="mt-4 w-full">
               {isAnimationComplete && (
                 <>
                   <ProgressBar label="Exceptional Quality" percentage={95} delay={0.2} />
                   <ProgressBar label="Reliable Services" percentage={90} delay={0.4} />
-                  <ProgressBar label="Expertise in Industrial Wiring" percentage={85} delay={0.6} />
+                  <ProgressBar label="Expertise in Craftsmanship" percentage={85} delay={0.6} />
                   <ProgressBar label="Comprehensive Solutions" percentage={90} delay={0.8} />
                 </>
               )}
@@ -70,12 +70,12 @@ const BannerDetails = ({ reverse }) => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className={`flex ${reverse ? "order-1" : ""} justify-center`}
+            className={`${reverse ? "order-1" : ""}`}
           >
             <img 
               src={img5}
               alt="Electrical contracting work"
-              className="overflow-hidden mx-auto w-full p-4 md:max-w-[400px]"
+              className="overflow-hidden mx-auto w-full p-4 md:max-w-[400px] mt-10 md:mt-16" 
               loading="lazy"
             />
           </motion.div>

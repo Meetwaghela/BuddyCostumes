@@ -1,40 +1,42 @@
 import React from "react";
-import { FaTools, FaLightbulb, FaSmile, FaWrench, FaFileContract, FaSolarPanel } from "react-icons/fa";
-import { GiWireCoil } from "react-icons/gi";
+import {  FaSmile, FaWrench, FaFileContract, FaSolarPanel,FaRegGem } from "react-icons/fa";
+import { GiAmpleDress, GiRolledCloth, GiSewingNeedle } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { TbHexagonLetterAFilled } from "react-icons/tb";
+import { MdDraw } from "react-icons/md";
 
 
 const ServiceData = {
   development: [
     {
       id: 1,
-      title: "Electrical Installations",
-      href: "/Electricalins",
-      icon: <FaTools />,
+      title: "Custom Costume Design ",
+      href: "/CustomDesign",
+      icon: <GiAmpleDress />,
       delay: 0.2,
     },
     {
       id: 2,
-      title: "Industrial Wiring",
-      href: "/Wiring",
-      icon: <GiWireCoil />,
+      title: "Fabric sourcing and selection",
+      href: "/Fabric",
+      icon: <GiRolledCloth />,
       delay: 0.3,
     },
     {
       id: 3,
-      title: "Electrical Solutions",
-      href: "/Solutions",
-      icon: <FaLightbulb />,
+      title: "Prop and Accessory Making",
+      href: "/Accessory",
+      icon: <TbHexagonLetterAFilled />,
       delay: 0.4,
     },
   ],
   other: [
     {
       id: 4,
-      title: "Electrical Maintenance",
-      href: "/Maintenance",
-      icon: <FaWrench />,
+      title: "Costume Maintenance",
+      href: "/Innovative",
+      icon: <GiSewingNeedle />,
       delay: 0.6,
     },
     // {
@@ -45,24 +47,19 @@ const ServiceData = {
     //   delay: 0.7,
     // },
     {
-      id: 6,
-      title: "Innovative Electrical Solutions",
-      href: "/Innovative",
-      icon: <FaSolarPanel />,
-      delay: 0.7,
-    },
-  ],
-  support: [
-    {
-      id: 7,
-      title: "Satisfied Clients",
-      href: "/Clients",
-      icon: <FaSmile />,
+      id: 5,
+      title: "Embroidery with Stones",
+      href: "/Stonework",
+      icon: <FaRegGem />,
       delay: 0.5,
     },
+    
+  ],
+  support: [
+    
     {
-      id: 8,
-      title: "24/7 Support",
+      id: 6,
+      title: "Support",
       href: "/ContactUs",
       icon: <BiSupport />,
       delay: 0.7,
@@ -146,7 +143,7 @@ const Service = () => {
           Our Services
         </motion.h1>
         <p className="text-xl font-semibold text-slate-600 dark:text-slate-300 text-center mb-6">
-          Krishna Electricals provides top-tier electrical installations, maintenance, and industrial wiring solutions. We cater to diverse industries, ensuring safe, reliable, and efficient electrical services for businesses of all sizes.
+        Buddys Costumes provides transformative costume design, expert construction, precise alteration solutions, and exquisite stone work detailing. We cater to diverse performers, artists, and individuals, ensuring impactful, reliable, and tailored costume services for all productions.
         </p>
 
         {renderServiceSection("Development", ServiceData.development)}

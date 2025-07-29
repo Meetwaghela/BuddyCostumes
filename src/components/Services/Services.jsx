@@ -1,44 +1,45 @@
 import React from "react";
-import { FaTools, FaLightbulb, FaSmile, FaWrench } from "react-icons/fa";
-import { GiWireCoil } from "react-icons/gi";
+import { FaTools, FaLightbulb, FaSmile, FaWrench, FaRegGem } from "react-icons/fa";
+import { GiAmpleDress, GiRolledCloth, GiSewingNeedle } from "react-icons/gi";
 import { BiSupport } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { TbHexagonLetterAFilled } from "react-icons/tb";
 
 const ServicesData = [
   {
     id: 1,
-    title: "Electrical Installations",
-    href: "/Electricalins",
-    icon: <FaTools />,
-    delay: 0.2,
+    title: "Custom Costume Design ",
+      href: "/CustomDesign",
+      icon: <GiAmpleDress />,
+      delay: 0.2,
   },
   {
     id: 2,
-    title: "Industrial Wiring",
-    href: "/Wiring",
-    icon: <GiWireCoil />,
-    delay: 0.3,
+    title: "Fabric sourcing and selection",
+      href: "/Fabric",
+      icon: <GiRolledCloth />,
+      delay: 0.3,
   },
   {
     id: 3,
-    title: "Electrical Solutions",
-    href: "Solutions",
-    icon: <FaLightbulb />,
-    delay: 0.4,
+    title: "Prop and Accessory Making",
+      href: "/Accessory",
+      icon: <TbHexagonLetterAFilled />,
+      delay: 0.4,
   },
   {
     id: 4,
-    title: "Satisfied Clients",
-    href: "Clients",
-    icon: <FaSmile />,
+      title: "Embroidery with Stones",
+      href: "/Stonework",
+      icon: <FaRegGem />,
     delay: 0.5,
   },
   {
     id: 5,
-    title: "Electrical Maintenance",
-    href: "Maintenance",
-    icon: <FaWrench />,
-    delay: 0.6,
+      title: "Costume Maintenance",
+      href: "/Innovative",
+      icon: <GiSewingNeedle />,
+      delay: 0.6,
   },
   {
     id: 6,

@@ -72,7 +72,7 @@ const Process = () => {
           viewport={{ once: true }}
           className="text-5xl font-bold mt-2"
         >
-          Powering Your Business with Top-Quality <br /> Electrical Services
+          Crafting Your Vision with Top-Quality  <br /> Costume Creations
         </motion.h1>
         <motion.p
           variants={SlideFromAbove}
@@ -81,7 +81,7 @@ const Process = () => {
           viewport={{ once: true }}
           className="text-lg mt-4"
         >
-          Powering your business with our exceptional electrical contracting services.
+          Powering your event with our exceptional costume production
         </motion.p>
         <motion.button
           onClick={handleConsultationClick}

@@ -1,0 +1,391 @@
+/* In DanceStudio.css */
+
+/* --- CRITICAL FIX FOR CALENDAR NAVIGATION VISIBILITY --- */
+
+/* Ensure the calendar's main navigation container is always visible and correctly laid out */
+.react-calendar__navigation {
+    display: flex !important; /* Forces flexbox for alignment */
+    height: 44px !important; /* Ensures it has a visible height */
+    margin-bottom: 1em !important; /* Space below navigation */
+    align-items: center !important; /* Vertically centers content */
+    justify-content: space-between !important; /* Spreads out navigation elements */
+    width: 100% !important; /* Ensures it spans full width */
+    
+    /* --- The absolute key to making it visible by default: --- */
+    opacity: 1 !important; /* Forces full opacity, overriding any default 0 opacity */
+    visibility: visible !important; /* Forces visibility, overriding any default hidden state */
+    
+    /* Optional: Add a temporary background color to debug if still invisible */
+    /* background-color: rgba(255, 0, 0, 0.1) !important; */
+}
+
+/* Ensure the month and year text label is always visible and readable */
+.react-calendar__navigation__label {
+    flex-grow: 1 !important; /* Allows the label to take center space */
+    text-align: center !important; /* Centers the text */
+    font-size: 1.1em !important; /* Ensures readable font size */
+    font-weight: bold !important; /* Makes the text stand out */
+    /* Using a lighter text color for the label as it will now be on an indigo background */
+    color: white !important; /* Changed: Text color changed to white for better contrast on indigo background */
+    
+    /* --- Key for label visibility: --- */
+    opacity: 1 !important; /* Forces full opacity for the label */
+    visibility: visible !important; /* Forces visibility for the label */
+    
+    /* Optional: Add a temporary background color for debugging this specific element */
+    /* background-color: rgba(0, 255, 0, 0.1) !important; */
+}
+
+/* Style for the navigation buttons (e.g., arrows) - ensuring they are also always visible */
+.react-calendar__navigation button {
+    /* Updated background-color to match Tailwind's indigo-600 */
+    background-color: #4f46e5 !important; /* Changed: Primary blue set to Tailwind indigo-600 */
+    color: white !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 4px !important;
+    font-size: 1em !important;
+    cursor: pointer !important;
+    
+    /* Ensure buttons are also always visible */
+    opacity: 1 !important;
+    visibility: visible !important;
+    
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 44px !important;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+    /* Updated hover color to match Tailwind's indigo-700 */
+    background-color: #4338ca !important; /* Changed: Hover blue set to Tailwind indigo-700 */
+}
+.react-calendar__navigation button[disabled] {
+    background-color: #ccc !important;
+    cursor: not-allowed !important;
+}
+
+/* Dark mode adjustments for navigation (ensure your dark mode class is applied to a parent) */
+.dark .react-calendar__navigation__label {
+    /* Text color for dark mode label on indigo background */
+    color: white !important; /* Changed: Text color for dark mode label also white */
+}
+.dark .react-calendar__navigation button {
+    /* Updated background-color for dark mode to match Tailwind's indigo-800 */
+    background-color: #3730a3 !important; /* Changed: Dark mode blue set to Tailwind indigo-800 */
+    color: white !important;
+}
+.dark .react-calendar__navigation button:enabled:hover,
+.dark .react-calendar__navigation button:enabled:focus {
+    /* Updated hover color for dark mode to match Tailwind's indigo-900 */
+    background-color: #312e81 !important; /* Changed: Dark mode hover blue set to Tailwind indigo-900 */
+}
+.dark .react-calendar__navigation button[disabled] {
+    background-color: #555 !important;
+    color: #aaa !important;
+}
+
+/* --- END OF CRITICAL FIX --- */
+
+
+/* Keep the rest of your DanceStudio.css content below these rules */
+
+/* Calendar Styling */
+.calendar-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the react-calendar */
+.react-calendar {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.dark .react-calendar {
+    background-color: #333;
+    border-color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style calendar buttons (days) */
+.react-calendar__tile {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+    background-color: #e6e6e6;
+}
+.dark .react-calendar__tile {
+    background-color: #444;
+    border-color: #555;
+    color: #ddd;
+}
+.dark .react-calendar__tile:enabled:hover,
+.dark .react-calendar__tile:enabled:focus {
+    background-color: #555;
+}
+
+/* Currently selected day */
+.react-calendar__tile--active {
+    /* Updated selected tile background to match Tailwind's indigo-600 */
+    background-color: #4f46e5; /* Changed: Active tile blue set to Tailwind indigo-600 */
+    color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    /* Updated selected tile hover to match Tailwind's indigo-700 */
+    background-color: #4338ca; /* Changed: Active tile hover set to Tailwind indigo-700 */
+}
+.dark .react-calendar__tile--active {
+    /* Updated selected tile background for dark mode to match Tailwind's indigo-800 */
+    background-color: #3730a3; /* Changed: Dark mode active tile blue set to Tailwind indigo-800 */
+    color: white;
+}
+.dark .react-calendar__tile--active:enabled:hover,
+.dark .react-calendar__tile--active:enabled:focus {
+    /* Updated selected tile hover for dark mode to match Tailwind's indigo-900 */
+    background-color: #312e81; /* Changed: Dark mode active tile hover set to Tailwind indigo-900 */
+}
+
+/* Today's date */
+.react-calendar__tile--now {
+    background: #ffffa0;
+    color: #333;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+    background: #ffff70;
+}
+.dark .react-calendar__tile--now {
+    background: #5e5e00;
+    color: #eee;
+}
+.dark .react-calendar__tile--now:enabled:hover,
+.dark .react-calendar__tile--now:enabled:focus {
+    background: #7a7a00;
+}
+
+/* Time Slot Section */
+.time-slot-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.dark .time-slot-container {
+    background-color: #333;
+    border-color: #555;
+}
+
+.time-slot-header {
+    /* This already uses indigo-600 based on your React component:
+       bg-indigo-600 dark:bg-indigo-800
+       So no change needed here if you want to keep it consistent.
+       The CSS here for time-slot-header seems to be for a different component
+       or it's an older rule not directly used by your current React component's
+       date display. Your React component has:
+       <div className="bg-indigo-600 dark:bg-indigo-800 text-white p-3 rounded-md mb-4 font-semibold flex items-center justify-center gap-2 text-sm sm:text-base">
+    */
+    background-color: #003d80; /* This seems to be a remnant or unused if the React component applies Tailwind classes directly */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calendar-icon {
+    font-size: 1.2em;
+}
+
+.time-slot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.time-slot {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.dark .time-slot {
+    background-color: #444;
+    border-color: #555;
+    color: #ddd;
+}
+.time-slot:not(.booked):not(:disabled):hover {
+    background-color: #e0e0e0;
+    border-color: #aaa;
+}
+.dark .time-slot:not(.booked):not(:disabled):hover {
+    background-color: #555;
+    border-color: #777;
+}
+
+.time-slot.selected:not(.booked) {
+    /* Updated selected time slot to match Tailwind's indigo-600 */
+    background-color: #4f46e5; /* Changed: Selected time slot blue to Tailwind indigo-600 */
+    color: white;
+    border-color: #4338ca; /* Changed: Border to darker indigo */
+    font-weight: bold;
+}
+.dark .time-slot.selected:not(.booked) {
+    /* Updated selected time slot for dark mode to match Tailwind's indigo-800 */
+    background-color: #3730a3; /* Changed: Dark mode selected time slot blue to Tailwind indigo-800 */
+    color: white;
+    border-color: #312e81; /* Changed: Dark mode border to darker indigo */
+}
+
+.time-slot.booked,
+.time-slot:disabled {
+    background-color: #6c757d;
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #5a6268;
+    font-style: italic;
+    text-decoration: line-through;
+}
+.dark .time-slot.booked,
+.dark .time-slot:disabled {
+    background-color: #555;
+    color: #999;
+    border-color: #777;
+}
+
+.time-slot .time {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Booking Form */
+.booking-form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.dark .booking-form-container {
+    background-color: #333;
+    border-color: #555;
+}
+
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.dark .booking-form label {
+    color: #ddd;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+.dark .booking-form input[type="text"],
+.dark .booking-form input[type="email"],
+.dark .booking-form input[type="tel"] {
+    background-color: #444;
+    border-color: #666;
+    color: #eee;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.submit-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+.dark .submit-button {
+    background-color: #1e7e34;
+}
+.dark .submit-button:hover:not(:disabled) {
+    background-color: #155d22;
+}
+.dark .submit-button:disabled {
+    background-color: #666;
+    color: #bbb;
+}
+
+/* Booking Status Message */
+.booking-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.booking-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.dark .booking-status.success {
+    background-color: #1e622e;
+    color: #d4edda;
+    border-color: #388a47;
+}
+
+.booking-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.dark .booking-status.error {
+    background-color: #8c262c;
+    color: #f8d7da;
+    border-color: #a73c42;
+}

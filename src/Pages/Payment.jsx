@@ -4,14 +4,14 @@ const Payment = () => {
   return (
     <div className="container mx-auto mt-20 p-5 border rounded shadow-lg">
       <h1 className="text-2xl font-bold mb-5 dark:text-white">Payment Details</h1>
-      <h2 className="text-xl font-semibold mb-3 dark:text-white">Krishna Electricals</h2>
+      <h2 className="text-xl font-semibold mb-3 dark:text-white">Buddys Costumes</h2>
       
       <div className="mb-5">
         <h3 className="text-lg font-medium dark:text-white">Bank Details:</h3>
-        <p className='dark:text-white'>HDFC Bank</p>
-        <p className='dark:text-white'>A/C NO: 50200018262203</p>
-        <p className='dark:text-white'>IFSC CODE: HDFC0000733</p>
-        <p className='dark:text-white'>BRANCH: DHAMNKAR NAKA, BHIWANDI</p>
+        <p className='dark:text-white'>MASHREQ NEOBIZ Bank</p>
+        <p className='dark:text-white'>A/C NO: 019101388211</p>
+        <p className='dark:text-white'>IBAN: AE520330000019101388211</p>
+        <p className='dark:text-white'>TITLE : QASSER AL ANAQA TAILORING AND EMROIDERY</p>
       </div>
 
       {/* <form>

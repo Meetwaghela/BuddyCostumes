@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FaFacebook,
   FaInstagram,
   // FaLinkedin,
   FaLocationArrow,
@@ -17,9 +16,9 @@ const Footer = () => {
           <div className="px-5 py-1">
             <h1 className="mb-1 text-justify text-xl font-bold sm:text-left sm:text-3xl">
               <a href="/" className="">
-                <span className="inline-block font-bold">KRISHNA</span>
+                <span className="inline-block font-bold">BUDDYS</span>
                 <span className="inline-block font-bold text-primary text-red-500 ml-2">
-                  ELECTRICALS
+                  COSTUMES
                 </span>
               </a>
             </h1>
@@ -33,29 +32,29 @@ const Footer = () => {
                 aria-label="View location on Google Maps"
               >
                 <FaLocationArrow />
-                <p>Bhiwandi, Maharashtra</p>
+                <p>Satwa, UAE</p>
               </a>
             </div>
             <div className="mt-3 flex items-center gap-3">
               <FaMobileAlt />
               <p>
-                <a href="tel:+919970751651">+91 9970751651</a>
+                <a href="tel:+971567280480">+971 567280480</a>
               </p>
             </div>
             <div className="mt-3 flex items-center gap-3">
               <FaMobileAlt />
               <p>
-                <a href="tel:+919225136326">+91 9225136326</a>
+                <a href="tel:+971558546883">+971 558546883</a>
               </p>
             </div>
             <div className="jp-img1-container">
               <img
                 src={JP}
-                alt="Jayesh Patel"
+                alt="Shailesh Waghela"
                 className="rounded-full h-10 w-10 object-cover jp-img1"
               />
               <div className="jp-img1-name mt-3">
-                <h1>Jayesh Vagadiya</h1>
+                <h1>Shailesh Waghela</h1>
               </div>
             </div>
           </div>
@@ -105,7 +104,7 @@ const Footer = () => {
                   onSubmit={(e) => {
                     e.preventDefault();
                     const email = e.target.elements.email.value;
-                    window.location.href = `mailto:51181krishnaelectricals@gmail.com?from=${email}`;
+                    window.location.href = `mailto:BuddysCostumes@gmail.com?from=${email}`;
                   }}
                   className="flex gap-2"
                 >
@@ -127,7 +126,7 @@ const Footer = () => {
                 </form>
                 <div className="flex items-center gap-3 mt-4">
                   <a
-                    href="https://wa.me/+919970751651"
+                    href="https://wa.me/+971558546883"
                     aria-label="WhatsApp"
                     className="duration-200 hover:scale-105 text-3xl"
                   >
@@ -140,13 +139,7 @@ const Footer = () => {
                   >
                     <FaInstagram />
                   </a>
-                  <a
-                    href="#"
-                    className="duration-200 hover:scale-105 text-3xl"
-                    aria-label="Facebook"
-                  >
-                    <FaFacebook />
-                  </a>
+                  
                   {/* <a
                     href="#"
                     className="duration-200 hover:scale-105 text-3xl"
@@ -161,7 +154,7 @@ const Footer = () => {
         </div>
         <div>
           <div className="border-t-2 border-gray-300/50 py-6 text-center">
-            © 2016 Krishna Electricals all rights reserved
+            © 2020 Buddys Costumes all rights reserved
           </div>
         </div>
       </section>

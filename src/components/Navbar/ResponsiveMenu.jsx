@@ -50,7 +50,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
               />
             </div>
             <div>
-              <h1>Jayesh Vagadiya</h1>
+              <h1>Shailesh Waghela</h1>
               <h2 className="text-sm text-slate-500">Proprietor</h2>
             </div>
           </div>
@@ -62,8 +62,8 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
                 </a>
               </li>
               <li>
-                <a href="/Consultancy" className="mb-5 inline-block">
-                  Consultant
+                <a href="/DanceStudio" className="mb-5 inline-block">
+                  Dance Studio
                 </a>
               </li>
               <li>

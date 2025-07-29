@@ -1,0 +1,276 @@
+:root {
+  --frame-color-light: black;
+  --frame-color-dark: white;
+  --hover-bg-light: rgba(255, 255, 255, 0.75);
+  --hover-bg-dark: rgba(0, 0, 0, 0.75);
+  --text-color-light: #070707;
+  --text-color-dark: #f5f5f5;
+  --bg-color-light: #f0f0f0;
+  --bg-color-dark: #1a1a1a;
+}
+.contact-link {
+    cursor: pointer;
+    /* Optional: Add a hover effect for better UX */
+    text-decoration: underline; /* Makes it look more like a link */
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+    color: #007bff; /* Example: changes color on hover */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.5s, color 0.5s;
+  font-family: 'Inter', sans-serif; /* Added font-family for completeness */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* --- FIX START --- */
+  /* Removed the problematic negative margin-top that caused overlap */
+  /* Removed min-height: 100vh which forced the container to take full viewport height,
+     leading to unexpected scroll and layout issues within a larger page. */
+  /* --- FIX END --- */
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 340px; /* Fixed width as per your requirement */
+  height: 340px; /* Fixed height as per your requirement */
+  margin: 10px;
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.hover-image,
+.hover-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* **Crucial:** Ensures media fills the 340x340 space, potentially cropping */
+  display: block; /* Removes extra space below inline elements */
+  transition: transform 0.5s, border-radius 0.5s;
+}
+
+.image-wrapper:after,
+.image-wrapper:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 0 solid var(--frame-color-light);
+  transition: all 0.5s;
+  z-index: 3;
+}
+
+.image-wrapper:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid var(--frame-color-light);
+  border-left: 6px solid var(--frame-color-light);
+}
+
+.image-wrapper:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 6px solid var(--frame-color-light);
+  border-right: 7px solid var(--frame-color-light);
+}
+
+.dark .image-wrapper:after,
+.dark .image-wrapper:before {
+  border-color: var(--frame-color-dark);
+}
+
+.image-wrapper:hover:before,
+.image-wrapper:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper:hover .hover-image,
+.image-wrapper:hover .hover-video {
+  transform: scale(1.15);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.hover-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hover-bg-light);
+  color: var(--text-color-light);
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 2;
+  display: flex; /* Centers text vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper:hover .hover-content {
+  opacity: 1;
+}
+
+.dark .hover-content {
+  background: var(--hover-bg-dark);
+  color: var(--text-color-dark);
+}
+
+.click-to-know-more {
+  position: absolute;
+  bottom: 10px; /* Adjusted to be slightly above the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: var(--text-color-dark); /* Using dark text for better contrast on light hover background */
+  text-align: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.5s;
+  z-index: 4;
+}
+
+.image-wrapper:hover .click-to-know-more {
+  opacity: 1; /* Appears on hover for larger screens */
+}
+
+/* Specific media query adjustments */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    width: 80%; /* Takes 80% width on smaller screens */
+    height: auto; /* Auto height to maintain aspect ratio */
+    aspect-ratio: 1/1; /* Keeps it square, or adjust for desired shape */
+    margin: 10px auto; /* Centers the individual wrappers */
+  }
+
+  .hover-content {
+    display: none; /* Hide hover content on small screens by default */
+  }
+
+  .image-wrapper.active .hover-content {
+    display: flex; /* Show if 'active' class is added by JS */
+  }
+
+  .click-to-know-more {
+    display: block; /* Always visible on small screens */
+    opacity: 1;
+    bottom: 20px; /* Adjusted position for mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .click-to-know-more {
+    display: none; /* Hide "Click to know more" by default on larger screens */
+  }
+  .image-wrapper:hover .click-to-know-more {
+    opacity: 1; /* Only show on hover for larger screens */
+    display: block;
+  }
+}
+
+/* --- Modal/Lightbox Styles for Expanded View (NEW ADDITIONS) --- */
+
+.modal-overlay {
+  position: fixed; /* Ensures it covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* Very dark, nearly opaque background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to appear on top of other content */
+  backdrop-filter: blur(10px); /* Stronger blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  animation: fadeIn 0.3s ease-out forwards; /* Simple fade-in animation */
+}
+
+.modal-content {
+  background-color: transparent; /* No background, just the media */
+  padding: 15px; /* Padding around the media */
+  border-radius: 8px;
+  max-width: 95vw; /* Limits width to 95% of viewport width */
+  max-height: 95vh; /* Limits height to 95% of viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For positioning the close button */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Pronounced shadow for depth */
+  animation: zoomIn 0.3s ease-out forwards; /* Simple zoom-in animation */
+}
+
+.modal-media {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* **Crucial:** Shows the entire image/video, adding black bars if necessary */
+  display: block; /* Important for consistent rendering */
+  border-radius: 5px; /* Slight roundness for the media itself */
+}
+
+.close-button {
+  position: absolute;
+  top: 20px; /* Adjusted position for more space */
+  right: 20px; /* Adjusted position for more space */
+  color: #fff;
+  font-size: 48px; /* Larger close button */
+  cursor: pointer;
+  z-index: 1001; /* Above the media */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+  border-radius: 50%;
+  width: 55px; /* Increased size for easy clicking */
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1; /* Ensures 'X' is centered */
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Animations for modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Ensure focus outline is only visible for keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}

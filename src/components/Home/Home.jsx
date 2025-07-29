@@ -13,12 +13,11 @@ const Home = () => {
             className="flex flex-col items-center gap-4 text-center text-white md:items-start md:text-left "
           >
             <h1 className="text-5xl">
-              Expert Electrical Contracting Services
+              Expert Costume Making Services
             </h1>
             <p className="text-xl">
-              <b>Krishna Electricals </b>is dedicated to delivering top-quality electrical solutions. 
-              We serve various industries like textiles, pharmaceuticals, paper mills, warehouses and more. 
-              Our focus on excellence helps us stay at the top of the industry. 
+              <b>Buddys Costume</b>We are dedicated to delivering top-quality costume creations. We cater to a wide range of needs, from elaborate stage costumes to detailed character replicas, serving industries like entertainment, performance, and personal events. 
+              Our focus on excellence keeps us at the apex of the costume-making industry
             </p>
             <div className=" Button space-x-4">
               <button className="btn-primary"><a href="/ContactUs">
@@ -35,7 +34,7 @@ const Home = () => {
           >
             <img
               src={img}
-              className="h-full w-full hover:drop-shadow-md"
+              className="md:max-w-2xl h-auto rounded-md shadow-lg hover:drop-shadow-xl transition duration-300"
               alt="no image"
             />
           </div>

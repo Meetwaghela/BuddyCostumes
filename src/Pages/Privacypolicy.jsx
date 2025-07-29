@@ -8,7 +8,7 @@ const Privacypolicy = () => {
           Privacy Policy
         </h1>
         <p className="text-lg mb-6 text-center leading-relaxed text-gray-700 dark:bg-gray-900 dark:text-white">
-          Welcome to Krishna Electricals. We respect your privacy and are committed to protecting it through our <br/>compliance with this policy.
+          Welcome to BUDDYS COSTUMES. We respect your privacy and are committed to protecting it through our <br/>compliance with this policy.
         </p>
         
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:bg-gray-900 dark:text-white">1. Information We Collect</h2>
@@ -44,7 +44,7 @@ const Privacypolicy = () => {
         
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">5. Third-Party Websites</h2>
         <p className="text-gray-700 mb-6 dark:text-white">
-          Our website may contain links to other websites. We do not control, and are not responsible for the content or practices of these other websites. This privacy policy applies only to information collected by Krishna Electricals.
+          Our website may contain links to other websites. We do not control, and are not responsible for the content or practices of these other websites. This privacy policy applies only to information collected by Buddys Costumes.
         </p>
         
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">6. Changes to This Privacy Policy</h2>
@@ -57,8 +57,8 @@ const Privacypolicy = () => {
           If you have any questions about this privacy policy, please contact us:
         </p>
         <ul className="list-disc ml-8 mb-6 text-gray-700 dark:text-white">
-          <li>Email: <a href="mailto:51181krishnaelectricals@gmail.com" className="text-indigo-600 hover:text-indigo-800">51181krishnaelectricals@gmail.com</a></li>
-          <li>Phone: <a href="tel:+919970751651" className="text-indigo-600 hover:text-indigo-800">+919970751651</a></li>
+          <li>Email: <a href="mailto:buddyscostumes@gmail.com" className="text-indigo-600 hover:text-indigo-800">buddyscostumes@gmail.com</a></li>
+          <li>Phone: <a href="tel:+971558546883" className="text-indigo-600 hover:text-indigo-800">+971558546883</a></li>
         </ul>
       </div>
     </div>

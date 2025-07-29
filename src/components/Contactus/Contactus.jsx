@@ -37,7 +37,7 @@ const Contactus = () => {
   const navigate = useNavigate();
 
   const handleConsultationClick = () => {
-    navigate('/Consultancy');
+    navigate('/Contactus');
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -72,7 +72,7 @@ const Contactus = () => {
           viewport={{ once: true }}
           className="text-5xl font-bold mt-2"
         >
-          Power Your Business with <br /> Krishna Electricals
+          Power Your Role that Exceed Expectations with <br /> Buddys Costumes 
         </motion.h1>
         <motion.p
           variants={SlideFromAbove}
@@ -81,7 +81,7 @@ const Contactus = () => {
           viewport={{ once: true }}
           className="text-lg mt-4"
         >
-          Let us help you power your business with our exceptional electrical contracting services.
+          Let us help you craft the perfect costume for your next event.
         </motion.p>
         <motion.button
           onClick={handleConsultationClick}
@@ -91,7 +91,7 @@ const Contactus = () => {
           viewport={{ once: true }}
           className="bg-blue-800 text-white px-6 py-3 rounded-lg mt-6 dark:hover:bg-white hover:text-black hover:bg-gray-400"
         >
-          Free consultation
+          Plan Meeting
         </motion.button>
       </div>
     </div>

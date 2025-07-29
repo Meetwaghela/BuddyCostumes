@@ -4,22 +4,27 @@ import "./Gallery.css";
 import Img from "./Img";
 import LargeImage from "./LargeImg";
 // import closeButtonImg from '../assets/x-button.png';
-import Gallery1 from "../../components/assets/Gallery1.jpg";
-import Gallery2 from "../../components/assets/Gallery2.jpg";
+import Gallery1 from "../../components/assets/Gallery1.jpeg";
+import Gallery2 from "../../components/assets/Gallery2.jpeg";
 import Gallery3 from "../../components/assets/Gallery3.jpg";
 import Gallery4 from "../../components/assets/Gallery4.jpeg";
-import Gallery5 from "../../components/assets/Gallery5.jpg";
-import Gallery6 from "../../components/assets/Gallery6.jpg";
-import Gallery7 from "../../components/assets/Gallery7.jpg";
-import Gallery8 from "../../components/assets/Gallery8.jpg";
-import Gallery9 from "../../components/assets/Gallery9.jpg";
-import Gallery10 from "../../components/assets/Gallery10.jpeg";
-import Gallery11 from "../../components/assets/Gallery11.jpg";
-import Gallery12 from "../../components/assets/Gallery12.jpg";
+import Gallery5 from "../../components/assets/Gallery5.jpeg";
+import Gallery6 from "../../components/assets/Gallery6.jpeg";
+import Gallery7 from "../../components/assets/Gallery7.jpeg";
+import Gallery8 from "../../components/assets/Gallery8.jpeg";
+import Gallery9 from "../../components/assets/Gallery9.jpeg";
+import Gallery10 from "../../components/assets/Gallery10.jpg";
+import Gallery11 from "../../components/assets/Gallery11.jpeg";
+import Gallery12 from "../../components/assets/Gallery12.jpeg";
 import Gallery13 from "../../components/assets/Gallery13.jpg";
-import Gallery14 from "../../components/assets/Gallery14.jpg";
-import Gallery15 from "../../components/assets/Gallery15.jpg";
-import Gallery16 from "../../components/assets/Gallery16.jpg";
+import Gallery14 from "../../components/assets/Gallery14.jpeg";
+import Gallery15 from "../../components/assets/Gallery15.jpeg";
+import Gallery16 from "../../components/assets/Gallery16.jpeg";
+import Gallery17 from "../../components/assets/Gallery17.jpeg";
+import Gallery18 from "../../components/assets/Gallery18.jpeg";
+import Gallery19 from "../../components/assets/Gallery19.jpeg";
+import Gallery20 from "../../components/assets/Gallery20.jpeg";
+
 
 const Gallery = () => {
     const [imgLst] = useState([
@@ -38,7 +43,11 @@ const Gallery = () => {
         { imgSrc: Gallery13 },
         { imgSrc: Gallery14 },
         { imgSrc: Gallery15 },
-        { imgSrc: Gallery16 }
+        { imgSrc: Gallery16 },
+        { imgSrc: Gallery17 },
+        { imgSrc: Gallery18 },
+        { imgSrc: Gallery19 },
+        { imgSrc: Gallery20 }
     ]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
