@@ -53,7 +53,12 @@ const Fabric = () => {
             onClick={() => handleClick(index)}
           >
             {item.type === 'image' ? (
-              <img src={item.src} alt={item.alt} className="hover-image" />
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="hover-image"
+                loading="lazy" {/* Added native lazy loading for images */}
+              />
             ) : item.type === 'video' ? (
               <div className="video-wrapper">
                 <video
@@ -64,6 +69,7 @@ const Fabric = () => {
                   muted
                   className="hover-video"
                   controls
+                  preload="none" {/* Added preload="none" for videos to prevent pre-loading */}
                 >
                   Your browser does not support the video tag.
                 </video>

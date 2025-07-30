@@ -19,14 +19,13 @@ import c13 from '../../components/assets/c13.jpeg';
 import './Customdesign.css'; // For the image gallery specific styles
 
 const Customdesign = () => {
+  // activeIndex will now handle both active state for the gallery and the selected media
   const [activeIndex, setActiveIndex] = useState(0);
-  const [clickedIndex, setClickedIndex] = useState(null);
-  const [selectedMedia, setSelectedMedia] = useState(null); // New state for expanded media
+  const [selectedMedia, setSelectedMedia] = useState(null); // State for expanded media
 
   const handleClick = (index) => {
+    // This function is currently only used to set activeIndex, but the media is expanded via handleMediaClick
     setActiveIndex(index);
-    // Toggle clicked state: if clicking the active image, unclick it; otherwise, set it as clicked.
-    setClickedIndex(index === clickedIndex ? null : index);
   };
 
   const handleMediaClick = (mediaItem) => {
@@ -40,7 +39,7 @@ const Customdesign = () => {
   const mediaItems = [
     { type: 'image', src: cc2 },
     { type: 'image', src: c1 },
-    { type: 'video', src: cc3 }, // Make sure this is 'video'
+    { type: 'video', src: cc3 },
     { type: 'image', src: c4 },
     { type: 'video', src: c5 },
     { type: 'image', src: c6 },
@@ -74,7 +73,6 @@ const Customdesign = () => {
         {/* Section: Our Custom Costume Design Process */}
         <section className="py-6">
           <h2 className="text-3xl font-semibold text-green-600 mt-0 mb-4">Our Custom Costume Design Process</h2>
-          {/* Ensured strong bottom margin for the list */}
           <ol className="list-decimal list-inside mt-0 text-gray-600 dark:text-gray-400 mb-12">
             <li className="mb-3">
               Concept & Idea Sharing: We begin with an in-depth discussion about your vision, character, event, and budget. Share your ideas and references, and we'll collaboratively refine the concept.
@@ -102,7 +100,12 @@ const Customdesign = () => {
                 onClick={() => handleMediaClick(item)}
               >
                 {item.type === 'image' && (
-                  <img src={item.src} alt={item.alt || ''} className="hover-image" />
+                  <img
+                    src={item.src}
+                    alt={item.alt || ''}
+                    className="hover-image"
+                    loading="lazy" // Added native lazy loading for images
+                  />
                 )}
                 {item.type === 'video' && (
                   <video
@@ -112,7 +115,10 @@ const Customdesign = () => {
                     loop
                     autoPlay // ADD autoPlay attribute here
                     className="hover-image"
-                  />
+                    preload="none" // Added preload="none" for videos
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 )}
               </div>
             ))}
@@ -126,12 +132,10 @@ const Customdesign = () => {
             Experience the magic of a costume designed exclusively for you. Our innovative craftsmanship transforms your ideas into unparalleled wearable art, ensuring you stand out.
           </p>
           <p className="mt-6 font-bold text-blue-600 leading-relaxed">
-            {/* --- MODIFIED CODE FOR THE BUTTON AND TEXT --- */}
             <a href="/ContactUs" className="inline-block bg-white text-blue-700 px-8 py-3 rounded-full font-bold shadow-md hover:bg-gray-100 hover:scale-105 transition-all duration-300">
               Contact us today
             </a>
             {' '}to discuss your next custom costume project and let us help you make an unforgettable statement!
-            {/* --- END MODIFIED CODE --- */}
           </p>
         </section>
       </div>
@@ -142,10 +146,22 @@ const Customdesign = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-button" onClick={closeModal}>&times;</span>
             {selectedMedia.type === 'image' && (
-              <img src={selectedMedia.src} alt="Expanded costume view" className="modal-media" />
+              <img
+                src={selectedMedia.src}
+                alt="Expanded costume view"
+                className="modal-media"
+                loading="lazy" // Added native lazy loading for modal images
+              />
             )}
             {selectedMedia.type === 'video' && (
-              <video src={selectedMedia.src} controls autoPlay loop className="modal-media" />
+              <video
+                src={selectedMedia.src}
+                controls
+                autoPlay
+                loop
+                className="modal-media"
+                preload="none" // Added preload="none" for modal videos
+              />
             )}
           </div>
         </div>

@@ -1,4 +1,3 @@
-// src/pages/AlterationAndRepairPage.js
 import React, { useState, useRef, useEffect } from 'react';
 
 // Import your costume-themed video files directly
@@ -113,11 +112,9 @@ const Innovative = () => {
                                 controls
                                 loop={playingIndex === index} // Loop only when playing
                                 muted={playingIndex !== index} // Mute when not playing, unmute when playing
-                                // Changed aspect ratio to 3:4 (width:height) to make it taller
-                                // You can try aspect-[2/3] for even taller, or adjust the numbers like aspect-[9/16] for classic portrait video
                                 className="w-full object-cover rounded-md aspect-[3/4] max-w-sm"
-                                // Removed autoPlay here as it's now controlled by state
                                 onEnded={() => setPlayingIndex(null)} // Reset state when video ends
+                                preload="none" // Added preload="none" for lazy loading videos
                             >
                                 Your browser does not support the video tag.
                             </video>
