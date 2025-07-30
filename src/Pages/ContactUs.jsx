@@ -26,16 +26,16 @@ const contactData = [
     {
         id: 3,
         title: "Talk to us",
-        text: "+971567280480",
-        link: "tel:+971567280480",
+        text: "+971558546883",
+        link: "tel:+971558546883",
         icon: <BiPhoneCall aria-label="Phone Icon" />,
         delay: 0.3,
     },
     {
         id: 4,
         title: "Message to us",
-        text: "+971567280480",
-        link: "sms:+971567280480",
+        text: "+971558546883",
+        link: "sms:+971558546883",
         icon: <FaRegMessage aria-label="Message Icon" />,
         delay: 0.4,
     },
@@ -250,7 +250,7 @@ const ContactUs = () => {
                 <div className="flex flex-col md:flex-row gap-8 rounded-2xl p-2 dark:text-white dark:bg-gray-800">
                     <div className="contact-form flex flex-col items-center gap-4 text-center dark:bg-gray-800 dark:text-white text-black md:w-[calc(50%-1rem)]"> {/* Adjusted width */}
                         {/* Form Heading */}
-                        <h1 className="text-3xl text-center font-semibold dark:bg-gray-800 dark:text-white">Let's discuss your electrical needs</h1>
+                        <h1 className="text-3xl text-center font-semibold dark:bg-gray-800 dark:text-white">Let's discuss your Costumes needs</h1>
                         <form onSubmit={handleSubmit}>
                             {/* Name Input */}
                             <input
