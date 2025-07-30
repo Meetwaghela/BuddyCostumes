@@ -154,6 +154,12 @@ const ContactUs = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData), // Directly send formData object
+            });', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData), // Directly send formData object
             });
 
             const data = await response.json(); // Parse the JSON response from the backend
