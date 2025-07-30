@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // No need to import { Link } from 'react-router-dom'; if you're using <a> tag directly
 
 // Import your local image and video assets
-import cc2 from '../../components/assets/cc2.mp4';
+import cc2 from '../../components/assets/cc2.jpeg';
 import c1 from '../../components/assets/c1.jpeg';
 import cc3 from '../../components/assets/cc3.mp4';
 import c4 from '../../components/assets/c4.jpeg';
@@ -38,7 +38,7 @@ const Customdesign = () => {
   };
 
   const mediaItems = [
-    { type: 'video', src: cc2 },
+    { type: 'image', src: cc2 },
     { type: 'image', src: c1 },
     { type: 'video', src: cc3 }, // Make sure this is 'video'
     { type: 'image', src: c4 },
