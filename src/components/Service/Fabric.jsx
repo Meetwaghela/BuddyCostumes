@@ -26,7 +26,7 @@ const Fabric = () => {
     { src: fab2, alt: 'Sustainable Hemp Fabric Texture', type: 'image' },
     { src: fab3, alt: 'Intricately Woven Brocade Fabric', type: 'image' },
     { src: fab4, alt: 'Selection of Colorful Silk Fabrics', type: 'image' },
-    { src: fab5, alt: 'Digital Fabric Printing Process', type: 'image' },
+    { src: fab5, alt: 'Digital Fabric Printing Process', 'type': 'image' },
     { src: fab6, alt: 'Embroidered Velvet Fabric Sample', type: 'image' },
     { src: fab7, alt: 'Patterned Cotton Fabric Rolls', type: 'image' },
     { src: fab8, alt: 'Heavy Duty Canvas Fabric for Costumes', type: 'image' },
@@ -57,19 +57,21 @@ const Fabric = () => {
                 src={item.src}
                 alt={item.alt}
                 className="hover-image"
-                loading="lazy" {/* Added native lazy loading for images */}
+                loading="lazy" // Native lazy loading for images - COMMENT MOVED HERE
+                // Consider adding width and height attributes for layout stability!
+                // For example: width="300" height="300"
               />
             ) : item.type === 'video' ? (
               <div className="video-wrapper">
                 <video
                   src={item.src}
-                  alt={item.alt}
+                  alt={item.alt} // Alt text for video is for accessibility if video fails to load
                   loop
                   autoPlay
                   muted
                   className="hover-video"
                   controls
-                  preload="none" {/* Added preload="none" for videos to prevent pre-loading */}
+                  preload="none" // Prevents video pre-loading
                 >
                   Your browser does not support the video tag.
                 </video>
