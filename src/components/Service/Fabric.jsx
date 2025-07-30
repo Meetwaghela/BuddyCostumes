@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Fabric.css'; // Assuming this CSS file contains the necessary styling for layout
+import './Fab.css'; // Assuming this CSS file contains the necessary styling for layout
 import fab1 from '../../components/assets/fab1.jpeg';
 import fab2 from '../../components/assets/fab2.jpeg';
 import fab3 from '../../components/assets/fab3.jpeg';
