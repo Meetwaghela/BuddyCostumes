@@ -148,7 +148,13 @@ const ContactUs = () => {
         try {
             // Send data to your backend API using formData state
             // IMPORTANT: Ensure this URL matches your backend server's address and port
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch('https://buddyscostumes-backend.onrender.com/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData), // Directly send formData object
+            });', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
