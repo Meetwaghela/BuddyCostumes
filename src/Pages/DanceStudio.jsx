@@ -9,7 +9,7 @@ import moment from 'moment'; // Ensure moment is imported
 import 'moment-timezone'; // Ensure moment-timezone is imported
 
 // --- Configuration for Backend URL ---
-const API_BASE_URL = 'http://localhost:5000/api/studio';
+const API_BASE_URL = 'http://localhost:5000/api/studio'; 'https://buddycostumes.netlify.app/';
 const DUBAI_TIMEZONE = 'Asia/Dubai'; // Define timezone consistently
 
 console.log('DanceStudio component is trying to render');
