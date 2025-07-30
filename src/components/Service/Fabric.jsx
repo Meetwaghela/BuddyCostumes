@@ -1,4 +1,3 @@
-// src/pages/AlterationAndRepairPage.js
 import React, { useState } from 'react';
 import './Fabric.css'; // Assuming this CSS file contains the necessary styling for layout
 import fab1 from '../../components/assets/fab1.jpeg';
@@ -15,12 +14,10 @@ import fab11 from '../../components/assets/fab11.jpeg';
 
 const Fabric = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Initialize as null so no item is active by default
-  const [clickedIndex, setClickedIndex] = useState(null);
 
   const handleClick = (index) => {
     // Toggle active state: if clicking the same item, deactivate it. Otherwise, activate the new item.
     setActiveIndex(index === activeIndex ? null : index);
-    setClickedIndex(index === clickedIndex ? null : index);
   };
 
   // Corrected structure: 'images' is now a direct array of objects
@@ -40,15 +37,15 @@ const Fabric = () => {
 
   return (
     <div>
-      <div className='text-3xl font-bold text-center py-16 mb-20 dark:bg-gray-900 dark:text-white'> {/* Adjusted py-20 to py-16 */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-blue-700 dark:text-blue-400 drop-shadow-lg text-center"> {/* Added mb-6 and changed text-indigo to text-blue */}
+      <div className='text-3xl font-bold text-center py-16 mb-20 dark:bg-gray-900 dark:text-white'>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-blue-700 dark:text-blue-400 drop-shadow-lg text-center">
           Fabric Sourcing & Selection
         </h1>
-        <p className='text-xl italic font-semibold justify-center text-center dark:bg-gray-900 dark:text-white px-4 md:px-8 lg:px-16'> {/* Added horizontal padding for better readability on smaller screens */}
+        <p className='text-xl italic font-semibold justify-center text-center dark:bg-gray-900 dark:text-white px-4 md:px-8 lg:px-16'>
           We're all about bringing your unique costume vision to life at Buddy's Costume! Feel free to bring your own special fabric, or simply share your design ideas with us. We'll then hit the market to find the ideal fabric and meticulously stitch your custom costume.
         </p>
       </div>
-      <div className="gap-8 image-container"> {/* Ensure 'image-container' has a layout that can display multiple items, e.g., display: grid or display: flex; flex-wrap: wrap; */}
+      <div className="gap-8 image-container">
         {images.map((item, index) => (
           <div
             key={index}
@@ -66,7 +63,6 @@ const Fabric = () => {
                   autoPlay
                   muted
                   className="hover-video"
-                  // Added controls for better user experience, especially for videos
                   controls
                 >
                   Your browser does not support the video tag.
@@ -77,12 +73,6 @@ const Fabric = () => {
             <div className="font-semibold hover-content">
               {item.content}
             </div>
-            {/* The "Click to know more" message should only show if the item is NOT active */}
-            {activeIndex !== index && (
-              <div className={`click-to-know-more text-white`}>
-                Click to know more about image or video
-              </div>
-            )}
           </div>
         ))}
       </div>
