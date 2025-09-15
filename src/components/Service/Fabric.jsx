@@ -11,6 +11,7 @@ import fab8 from '../../components/assets/fab8.jpeg';
 import fab9 from '../../components/assets/fab9.jpeg';
 import fab10 from '../../components/assets/fab10.jpeg';
 import fab11 from '../../components/assets/fab11.jpeg';
+import fab12 from '../../components/assets/fab12.jpeg';
 
 const Fabric = () => {
   const [activeIndex, setActiveIndex] = useState(null); // Initialize as null so no item is active by default
@@ -33,12 +34,13 @@ const Fabric = () => {
     { src: fab9, alt: 'Sparkling Sequin Fabric on Display', type: 'image' },
     { src: fab10, alt: 'Sustainable Hemp Fabric (alternative)', type: 'image' },
     { src: fab11, alt: 'Luxury Lace Fabric Detail', type: 'image' },
+    { src: fab12, alt: ' Fabric Detail', type: 'image' },
   ];
 
   return (
     <div>
       <div className='text-3xl font-bold text-center py-16 mb-20 dark:bg-gray-900 dark:text-white'>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-blue-700 dark:text-blue-400 drop-shadow-lg text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-7 mb-6 leading-tight text-blue-700 dark:text-blue-400 drop-shadow-lg text-center">
           Fabric Sourcing & Selection
         </h1>
         <p className='text-xl italic font-semibold justify-center text-center dark:bg-gray-900 dark:text-white px-4 md:px-8 lg:px-16'>

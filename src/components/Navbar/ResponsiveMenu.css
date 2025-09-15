@@ -3,7 +3,7 @@
     width: 12;
     display: flex;
     align-items: center;
-    
+     
 }
 
 .jp-img1 {
@@ -29,8 +29,7 @@
     transform: scale(4.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
   }
-  
-
+   
 
 .jp-img {
     position: relative;
@@ -46,13 +45,12 @@
     transform-origin: top left;
     transition: transform 0.8s ease, box-shadow 0.3s ease;
   }
-  
+   
   .jp-img:hover {
     transform: scale(4.5);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.507);
   }
-  
-
+   
 
 .jp-image {
     position: relative;
@@ -97,4 +95,3 @@
     position: relative; 
     z-index: 1; 
   }
-  

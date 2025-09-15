@@ -1,15 +1,12 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-// Components that are always loaded (e.g., header, footer, responsive menu)
-// These are typically small and needed on every page, so no lazy loading.
+// Always-loaded components
 import Navbar from './components/Navbar/Navbar';
 import ResponsiveMenu from './components/Navbar/ResponsiveMenu';
 import Footer from './components/Footer/Footer';
 
-// Define your "page" components using React.lazy()
-// Their JavaScript bundles will be loaded only when their respective routes are accessed.
-// IMPORTANT: Double-check these paths and ensure each component uses 'export default ComponentName;'
+// Lazy-loaded pages
 const Home = lazy(() => import('./components/Home/Home'));
 const Overview = lazy(() => import('./components/Overview/Overview'));
 const BannerDetails = lazy(() => import('./components/BannerDetails/BannerDetails'));
@@ -17,75 +14,91 @@ const Contactus = lazy(() => import('./components/Contactus/Contactus'));
 const Services = lazy(() => import('./components/Services/Services'));
 const Process = lazy(() => import('./components/Process/Process'));
 const Gallery = lazy(() => import('./components/Gallery/Gallery'));
-const Customdesign = lazy(() => import('./components/Service/Customdesign')); // Potential source of red line
+const Customdesign = lazy(() => import('./components/Service/Customdesign'));
 const Accessories = lazy(() => import('./components/Service/Accessories'));
 const Service = lazy(() => import('./components/Services/Service'));
 const Aboutus = lazy(() => import('./Pages/Aboutus'));
 const ContactUs = lazy(() => import('./Pages/ContactUs'));
 const Processes = lazy(() => import('./Pages/Processes'));
 const Privacypolicy = lazy(() => import('./Pages/Privacypolicy'));
-const DanceStudio = lazy(() => import('./Pages/DanceStudio'));
 const Innovative = lazy(() => import('./components/Service/Innovative'));
 const Payment = lazy(() => import('./Pages/Payment'));
-const Fabric = lazy(() => import('./components/Service/Fabric')); // Potential source of red line
+const Fabric = lazy(() => import('./components/Service/Fabric'));
 const Stonework = lazy(() => import('./components/Service/Stonework'));
+
+// Simple 404
+const NotFound = () => (
+  <div style={{ padding: 40, textAlign: 'center' }}>
+    <h1>404 — Page not found</h1>
+    <p>We couldn't find what you were looking for.</p>
+  </div>
+);
 
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Navbar is loaded immediately as it's likely on all pages */}
-      {/* Wrap your Routes with <Suspense> to show a fallback while lazy components load */}
-      <Suspense fallback={
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: '100vh',
-          fontSize: '24px',
-          color: '#333', // Adjust this color to match your site's theme
-          backgroundColor: '#f0f0f0' // Adjust background color
-        }}>
-          Loading site content...
-        </div>
-      }>
-        <Routes>
-          {/* Routes for individual lazy-loaded pages */}
-          <Route path="/Aboutus" element={<Aboutus />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/Gallery" element={<Gallery />} />
-          <Route path="/Customdesign" element={<Customdesign />} />
-          <Route path="/Accessories" element={<Accessories />} />
-          <Route path="/Processes" element={<Processes />} />
-          <Route path="/Service" element={<Service />} />
-          <Route path="/Privacy" element={<Privacypolicy />} />
-          <Route path="/Stonework" element={<Stonework />} />
-          <Route path="/DanceStudio" element={<DanceStudio />} />
-          <Route path="/Innovative" element={<Innovative />} />
-          <Route path="/Payment" element={<Payment />} />
-          <Route path="/Fabric" element={<Fabric />} />
+      <Navbar />
 
-          {/* Root path: This will load all components defined within its 'element' prop.
-              Since Home, Overview, BannerDetails, Contactus, Services, Process are lazy-loaded,
-              their chunks will be fetched when the user lands on the root path. */}
+      <Suspense
+        fallback={
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              minHeight: '100vh',
+              fontSize: 22,
+              color: '#333',
+              backgroundColor: '#f8f8f8',
+            }}
+          >
+            Loading site content...
+          </div>
+        }
+      >
+        <Routes>
+          {/* Root page (home sections) */}
           <Route
             path="/"
             element={
               <>
-                <ResponsiveMenu /> {/* Loaded immediately */}
+                <ResponsiveMenu />
                 <Home />
                 <Overview />
                 <BannerDetails />
                 <Contactus />
                 <Services />
                 <Process />
-                {/* Footer is typically outside <Routes> if it's on every page, but if it's
-                    part of the root page's content, it can be here. */}
-                <Footer />
               </>
             }
           />
+
+          {/* canonical lowercase routes */}
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/customdesign" element={<Customdesign />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/processes" element={<Processes />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/privacy" element={<Privacypolicy />} />
+          <Route path="/stonework" element={<Stonework />} />
+          <Route path="/innovative" element={<Innovative />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/fabric" element={<Fabric />} />
+
+          {/* Redirects for common mistakes / casing issues */}
+          <Route path="/Accessories" element={<Navigate to="/accessories" replace />} />
+          <Route path="/accessory" element={<Navigate to="/accessories" replace />} />
+          {/* sometimes a leading space (encoded) can appear in links — handle that too */}
+          <Route path="/%20accessories" element={<Navigate to="/accessories" replace />} />
+
+          {/* Catch-all */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+
+      <Footer />
     </Router>
   );
 }

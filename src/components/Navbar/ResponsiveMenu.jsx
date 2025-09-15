@@ -61,12 +61,7 @@ const ResponsiveMenu = ({ showMenu, setShowMenu }) => {
                   Home
                 </a>
               </li>
-              <li>
-                <a href="/DanceStudio" className="mb-5 inline-block">
-                  Dance Studio
-                </a>
-              </li>
-              <li>
+               <li>
                 <a href="/Service" className="mb-5 inline-block">
                  Our Services
                 </a>
